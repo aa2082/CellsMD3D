@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider, Button
 
 """SLIDERS EXAMPLE"""
+#https://matplotlib.org/stable/gallery/widgets/slider_demo.html
 # The parametrized function to be plotted
 def f(t, amplitude, frequency):
     return amplitude * np.sin(2 * np.pi * frequency * t)
@@ -70,6 +71,7 @@ plt.show()
 
 
 """VECTOR PLOTTING EXAMPLE"""
+#https://stackoverflow.com/questions/27023068/plotting-3d-vectors-using-python-matplotlib
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import numpy as np

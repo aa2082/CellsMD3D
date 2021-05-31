@@ -5,7 +5,7 @@
 # how to compile and run the cpp code?
 # (1) compile the code:
 # $> cd run_sim 
-# $> g++ ../*.cpp -foepnmp -O3
+# $> g++ ../*.cpp -fopenmp -O3
 # (2) run the code: 
 # $> ./a.out in1.txt 2 /Direcotry/To/Output/Folder > /Redirect/Console/Output &
 #### The command line argument in1.txt is the input txt file. 
