@@ -22,6 +22,8 @@ struct Cell
 	DoubleCoord AngularVelocity; // now a vector
 	DoubleCoord DynFric;
 	DoubleCoord StaFric;
+	int p_age = 0;
+	int q_age = 0;
 	int Type;
 	int Ancestor;
 };

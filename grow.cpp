@@ -21,10 +21,10 @@ void grow(double dt, Cell& cell, EnvArray3D& Env, AgaArray2D** Wal, UniformGrid&
 
 	// Get position in uniform grid to access correct index for height
 	IntCoord XYAddress = Grid.GetXY(Grid.GetAddress(cm));
-    
+
 	// Look up the growth rate in the environment array
 	Growth_rate = Env.Get(XYAddress).GrowthRate;
-	
+
     if (XYAddress.z==0)
     {
         double lambda=cm.z/BoxLength-floor(cm.z/BoxLength);
@@ -108,6 +108,13 @@ void divide(Cell& mother, Cell& daughter, double t){
 	// q in second daughter cell is the same as in the mother cell
 	daughter.Position.q = mother.Position.q;
 
+	//adding pole age
+	mother.p_age += 1;
+	daughter.q_age = mother.q_age + 1;
+	//
+	mother.q_age = 0;
+	daughter.p_age = 0;
+	
 	// set new lengths
 	daughter.Radius = cellRadius;
 
@@ -133,7 +140,7 @@ void divide(Cell& mother, Cell& daughter, double t){
 	// p in second daughter cell
 	daughter.Position.p = diff(mother.Position.q, scale(uv,daughter.Radius+mother.Radius));
 	daughter.Position.q = diff(daughter.Position.p, scale(uv,daughter.Length));
-    
+
     // add randomness in rotation of new p and q
     mother.Position.p=sum(mother.Position.p,scale(dOrien1,mother.Length));
     mother.Position.q=diff(mother.Position.q,scale(dOrien1,mother.Length));
@@ -148,4 +155,3 @@ void divide(Cell& mother, Cell& daughter, double t){
 
 
 }
-

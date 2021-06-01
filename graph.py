@@ -1,10 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider, Button
-
+import os
+import sys
 """SLIDERS EXAMPLE"""
 #https://matplotlib.org/stable/gallery/widgets/slider_demo.html
 # The parametrized function to be plotted
+"""
 def f(t, amplitude, frequency):
     return amplitude * np.sin(2 * np.pi * frequency * t)
 
@@ -68,14 +70,30 @@ def reset(event):
 button.on_clicked(reset)
 
 plt.show()
-
-
+"""
+"""DATA AQUISITION EXAMPLE"""
+def open_file(path):
+      try:
+          """Open and return the file specified by path for reading"""
+          return open(path, "r", encoding="utf-8")
+      except IOError:
+          print("error, can't find or open file")
+          sys.exit()
+def get_data(file):
+    lines = file.readlines()
+    data = []
+    for i in range(len(lines)):
+        data.append(i.split(" "))
+    return data
 """VECTOR PLOTTING EXAMPLE"""
 #https://stackoverflow.com/questions/27023068/plotting-3d-vectors-using-python-matplotlib
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
-
+num = 10
+file = open_file("~Desktop/biofilms/data/output3/Cells/"+str(num))
+data =get_data(file)
+print(data)
 soa = np.array([[0, 0, 1, 1, -2, 0], [0, 0, 2, 1, 1, 0],
                 [0, 0, 3, 2, 1, 0], [0, 0, 4, 0.5, 0.7, 0]])
 
@@ -87,5 +105,3 @@ ax.set_xlim([-1, 0.5])
 ax.set_ylim([-1, 1.5])
 ax.set_zlim([-1, 8])
 plt.show()
-
-"""DATA AQUISITION EXAMPLE"""

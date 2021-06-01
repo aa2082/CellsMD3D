@@ -1,4 +1,4 @@
-#include "InputOutput.h" 
+#include "InputOutput.h"
 
 #include "Cell.h"
 #include "Constants.h"
@@ -13,14 +13,14 @@ void CreateOutputFileLineage(int OutputID, OutputFiles& Files, bool append)
 {
     // create output file lineage
     char lineage_name[500];
-    
+
     // concatenate filenames with suffix
     strcpy(lineage_name,DirName);
     strcat(lineage_name,"/lineage");
     mkdir(lineage_name,S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
     sprintf(lineage_name,"%s/%d",lineage_name,OutputID);
     strcat(lineage_name,".txt");
-    
+
     // open files for output
 
     Files.lineage = fopen(lineage_name, "w");	// file to store lineage
@@ -28,7 +28,7 @@ void CreateOutputFileLineage(int OutputID, OutputFiles& Files, bool append)
         fprintf(stderr, "Can't open lineage file.\n");
         exit(1);
     }
-    
+
 }
 
 void CloseOutputFileLineage(OutputFiles& Files)
@@ -63,7 +63,7 @@ void CreateOutputFiles(int OutputID, OutputFiles& Files, bool append)
     mkdir(cell_name,S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
     sprintf(cell_name,"%s/%d",cell_name,OutputID);
 	strcat(cell_name,".txt");
-    
+
     strcpy(restart_name,DirName);
     strcat(restart_name,"/Restart");
     mkdir(restart_name,S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
@@ -123,13 +123,13 @@ void CreateOutputFiles(int OutputID, OutputFiles& Files, bool append)
     mkdir(walldensity2_name,S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
     sprintf(walldensity2_name,"%s/%d",walldensity2_name,OutputID);
 	strcat(walldensity2_name,".txt");
-    
+
     strcpy(roughHeight_name,DirName);
     strcat(roughHeight_name,"/RoughHeight");
     mkdir(roughHeight_name,S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
     sprintf(roughHeight_name,"%s/%d",roughHeight_name,OutputID);
     strcat(roughHeight_name,".txt");
-    
+
     strcpy(height_name,DirName);
     strcat(height_name,"/Height");
     mkdir(height_name,S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
@@ -235,7 +235,7 @@ void CreateOutputFiles(int OutputID, OutputFiles& Files, bool append)
         fprintf(stderr, "Can't open roughheight file.\n");
         exit(1);
     }
-    
+
 	Files.height = fopen(height_name, "w");	// file to store height of cells
 	if (Files.height == NULL) {
 	  fprintf(stderr, "Can't open height file.\n");
@@ -265,7 +265,7 @@ void CreateOutputFiles(int OutputID, OutputFiles& Files, bool append)
 	  fprintf(stderr, "Can't open wall field file.\n");
 	  exit(1);
 	}
-    
+
 
 }
 
@@ -451,7 +451,7 @@ Inputs ReadParameters(char* fname)
 	  fprintf(stderr, "Can't open parameter file.\n");
 	  exit(1);
 	}
-	
+
 	char* data_string;
 	char var_name[100];
 	char var_value[100];
@@ -506,9 +506,9 @@ Inputs ReadParameters(char* fname)
 		else if (strcmp(var_name,"Surface_Tension")==0)
 			tension = atof(var_value);
 		else if (strcmp(var_name,"t_max")==0)
-			t_max = atof(var_value); 
+			t_max = atof(var_value);
 		else if (strcmp(var_name,"dt")==0)
-			initial_dt = atof(var_value);	
+			initial_dt = atof(var_value);
 		else if (strcmp(var_name,"Box_x")==0)
 			BoxX = atoi(var_value);
 		else if (strcmp(var_name,"Box_y")==0)
@@ -622,8 +622,8 @@ void Output(FILE* FID, int ID, double t, const Cell& cell, const DoubleCoord F)
 
 {
 
-	fprintf(FID,"%4.4f %d %d %4.4f %4.4f %4.4f %4.4f %4.4f %4.4f %4.4f %4.4f %4.4E %4.4E %4.4E %4.4E %4.4E %4.4E %4.4f %4.4f %4.4f %4.4f %4.4f %4.4f %4.4f %4.4f %d %d %d\n",
-
-		t, ID, cell.Type, cell.Position.p.x, cell.Position.p.y, cell.Position.p.z, cell.Position.q.x, cell.Position.q.y, cell.Position.q.z, cell.Length, F.x, F.y, F.z, cell.Velocity.x, cell.Velocity.y, cell.Velocity.z, cell.GrowthRate, cell.DynFric.x, cell.DynFric.y, cell.DynFric.z, cell.StaFric.x, cell.StaFric.y, cell.StaFric.z, cell.Position.time_p, cell.Position.time_q, cell.Position.age_p, cell.Position.age_q, cell.Ancestor);
+	fprintf(FID,"%4.4f %d %d %4.4f %4.4f %4.4f %4.4f %4.4f %4.4f %4.4f %4.4f %4.4E %4.4E %4.4E %4.4E %4.4E %4.4E %4.4f %4.4f %4.4f %4.4f %4.4f %4.4f %4.4f %4.4f %d %d %d %d %d\n",
+    //added p_age and q_age to end of output
+		t, ID, cell.Type, cell.Position.p.x, cell.Position.p.y, cell.Position.p.z, cell.Position.q.x, cell.Position.q.y, cell.Position.q.z, cell.Length, F.x, F.y, F.z, cell.Velocity.x, cell.Velocity.y, cell.Velocity.z, cell.GrowthRate, cell.DynFric.x, cell.DynFric.y, cell.DynFric.z, cell.StaFric.x, cell.StaFric.y, cell.StaFric.z, cell.Position.time_p, cell.Position.time_q, cell.Position.age_p, cell.Position.age_q, cell.Ancestor, cell.p_age, cell.q_age);
 
 }
