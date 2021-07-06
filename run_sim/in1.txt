@@ -28,7 +28,7 @@ Diff_Colony		0.15
 Diff_Agar		1.0
 maxCarbon	0.5
 
-t_max		8.0
+t_max		0.5
 dt		0.00005
 Cdt		0.1
 Box_x		128
