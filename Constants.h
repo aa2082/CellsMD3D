@@ -6,6 +6,8 @@
 // physical variables
 extern double cellRadius;
 extern double L_divide;
+extern double T_divide;
+extern double V_divide;
 extern double k_cc;
 extern double k_wc;
 extern double varL;

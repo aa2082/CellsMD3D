@@ -34,7 +34,7 @@ struct Cell
 	int p_age = 0;		//p pole age
 	int q_age = 0; 		//p pole age
 	double Volume; 		//volume of cell
-	double Age;				//time since cell birth
+	double Age = 0.0;				//time since cell birth
 };
 
 #endif /* CELL_H_ */

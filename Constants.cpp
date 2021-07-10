@@ -1,5 +1,9 @@
 double cellRadius = 0.34;		// radius of each cell cap (constant for now, microns)
 double L_divide = 5.75;		// 3 length when cells divide (microns)
+
+double T_divide = 0.0;
+double V_divide = 0.0;
+
 double k_cc = 100000.0;			// elastic constant for cell-cell interactions (atm?)
 double k_wc = 100000.0;			// elastic constant between cells and wall
 double varL = 0.0;			// variation in the length of daughter cells

@@ -58,7 +58,7 @@ void GrowCell(Cell& cell, int cellID, double dt, int* dividingCells, int& numDiv
 				break;
 			case 2:
 				// TIMER
-				if(cell.Age>A_divide)	divide = true;
+				if(cell.Age>T_divide)	divide = true;
 				break;
 	}
 	if (divide)
