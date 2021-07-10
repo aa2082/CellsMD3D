@@ -577,7 +577,7 @@ Inputs ReadParameters(char* fname)
     else if (strcmp(var_name,"MaxCells")==0)
         maxCells = atoi(var_value);
     else if (strcmp(var_name,"GrowthProfile")==0)
-        growthProfile = atoi(GrowthProfile);
+        GrowthProfile = atoi(var_value);
 		else
 		{
 			printf("Unknown parameter: %s \n", var_name);
