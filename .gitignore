@@ -1,0 +1,3 @@
+# ignore doxygen outputs
+html/
+latex/
