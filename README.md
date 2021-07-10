@@ -1,38 +1,41 @@
-# README file
+#README file
 
-###############################
+---
 
-# how to compile and run the cpp code?
-# (1) compile the code:
-# $> cd run_sim 
-# $> g++ ../*.cpp -fopenmp -O3
-# (2) run the code: 
-# $> ./a.out in1.txt 2 /Direcotry/To/Output/Folder > /Redirect/Console/Output &
-#### The command line argument in1.txt is the input txt file. 
-#### The command line argument 2 means we run this code using 2 cores. You can change it to some other numbers. 
-#### The command line argument "/Direcotry/To/Output/Folder" is the directory to output the data. 
-#### The command line argument "> /Redirect/Console/Output &" means console outpout gets redirected to "/Redirect/Console/Output", and the program runs in background.
+how to compile and run the cpp code?
+(1) compile the code:
+```
+cd run_sim 
+g++ ../*.cpp -fopenmp -O3
+```
 
-###############################
+run the code: 
+`./a.out in1.txt 2 /Direcotry/To/Output/Folder > /Redirect/Console/Output &`
+The command line argument in1.txt is the input txt file. 
+The command line argument 2 means we run this code using 2 cores. You can change it to some other numbers. 
+The command line argument `/Direcotry/To/Output/Folder` is the directory to output the data. 
+The command line argument `> /Redirect/Console/Output &` means console outpout gets redirected to `/Redirect/Console/Output`, and the program runs in background.
 
-# don't blow up the memory
-# If you run the code in a local machine, and you don't want to take up too much memory, you need to set the variable MaxCells to be small, say 100000. If you set it to be 3 millions, then it might take up a lot of memory. 
-# To adjust MaxCells, you just go to in1.txt, and change the integer number that is next to "MaxCells".
+---
 
-###############################
+don't blow up the memory
+If you run the code in a local machine, and you don't want to take up too much memory, you need to set the variable MaxCells to be small, say 100000. If you set it to be 3 millions, then it might take up a lot of memory. 
+To adjust MaxCells, you just go to in1.txt, and change the integer number that is next to "MaxCells".
 
-# how is the data output?
-# We have a global variable DirName (Defined in Constants.h), which takes in the 4th command line argument. The output is stored in the path given by DirName. 
-# Under the DirName, there will be folders as the following:
-# AgarField     Density       Density2      Height        Restart       RoughDensity1 WallDensity   WallDensity2  lineage
-# Cells         Density1      Environment   Normal        RoughDensity  RoughDensity2 WallDensity1  WallField
-# In each folder, there will be data files such as: 
-# 0.txt   110.txt 123.txt 136.txt 149.txt 161.txt 174.txt 187.txt 2.txt   211.txt 224.txt 237.txt 25.txt  262.txt 275.txt 4.txt   52.txt  65.txt  78.txt  90.txt
-# 1.txt   111.txt 124.txt 137.txt 15.txt  162.txt 175.txt 188.txt 20.txt  212.txt 225.txt 238.txt 250.txt 263.txt 28.txt  40.txt  53.txt  66.txt  79.txt  91.txt
-# 10.txt  112.txt 125.txt 138.txt 150.txt 163.txt 176.txt 189.txt 200.txt 213.txt 226.txt 239.txt 251.txt 264.txt 29.txt  41.txt  54.txt  67.txt  8.txt   92.txt
-# 100.txt 113.txt 126.txt 139.txt 151.txt 164.txt 177.txt 19.txt  201.txt 214.txt 227.txt 24.txt  252.txt 265.txt 3.txt   42.txt  55.txt  68.txt  80.txt  93.txt
-# 101.txt 114.txt 127.txt 14.txt  152.txt 165.txt 178.txt 190.txt 202.txt 215.txt 228.txt 240.txt 253.txt 266.txt 30.txt  43.txt  56.txt  69.txt  81.txt  94.txt
-# 102.txt 115.txt 128.txt 140.txt 153.txt 166.txt 179.txt 191.txt 203.txt 216.txt 229.txt 241.txt 254.txt 267.txt 31.txt  44.txt  57.txt  7.txt   82.txt  95.txt
+---
+
+how is the data output?
+We have a global variable DirName (Defined in Constants.h), which takes in the 4th command line argument. The output is stored in the path given by DirName. 
+Under the DirName, there will be folders as the following:
+AgarField     Density       Density2      Height        Restart       RoughDensity1 WallDensity   WallDensity2  lineage
+Cells         Density1      Environment   Normal        RoughDensity  RoughDensity2 WallDensity1  WallField
+In each folder, there will be data files such as: 
+0.txt   110.txt 123.txt 136.txt 149.txt 161.txt 174.txt 187.txt 2.txt   211.txt 224.txt 237.txt 25.txt  262.txt 275.txt 4.txt   52.txt  65.txt  78.txt  90.txt
+1.txt   111.txt 124.txt 137.txt 15.txt  162.txt 175.txt 188.txt 20.txt  212.txt 225.txt 238.txt 250.txt 263.txt 28.txt  40.txt  53.txt  66.txt  79.txt  91.txt
+10.txt  112.txt 125.txt 138.txt 150.txt 163.txt 176.txt 189.txt 200.txt 213.txt 226.txt 239.txt 251.txt 264.txt 29.txt  41.txt  54.txt  67.txt  8.txt   92.txt
+100.txt 113.txt 126.txt 139.txt 151.txt 164.txt 177.txt 19.txt  201.txt 214.txt 227.txt 24.txt  252.txt 265.txt 3.txt   42.txt  55.txt  68.txt  80.txt  93.txt
+101.txt 114.txt 127.txt 14.txt  152.txt 165.txt 178.txt 190.txt 202.txt 215.txt 228.txt 240.txt 253.txt 266.txt 30.txt  43.txt  56.txt  69.txt  81.txt  94.txt
+102.txt 115.txt 128.txt 140.txt 153.txt 166.txt 179.txt 191.txt 203.txt 216.txt 229.txt 241.txt 254.txt 267.txt 31.txt  44.txt  57.txt  7.txt   82.txt  95.txt
 # 103.txt 116.txt 129.txt 141.txt 154.txt 167.txt 18.txt  192.txt 204.txt 217.txt 23.txt  242.txt 255.txt 268.txt 32.txt  45.txt  58.txt  70.txt  83.txt  96.txt
 # 104.txt 117.txt 13.txt  142.txt 155.txt 168.txt 180.txt 193.txt 205.txt 218.txt 230.txt 243.txt 256.txt 269.txt 33.txt  46.txt  59.txt  71.txt  84.txt  97.txt
 # 105.txt 118.txt 130.txt 143.txt 156.txt 169.txt 181.txt 194.txt 206.txt 219.txt 231.txt 244.txt 257.txt 27.txt  34.txt  47.txt  6.txt   72.txt  85.txt  98.txt
