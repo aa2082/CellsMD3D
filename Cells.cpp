@@ -47,7 +47,7 @@ void GrowCell(Cell& cell, int cellID, double dt, int* dividingCells, int& numDiv
 	// check if cell will divide
 	// add SWITCH here!
 	bool divide = false;
-	switch (growthProfile) {
+	switch (GrowthProfile) {
 			case 0:
 				// ADDER
 				if(cell.Volume-cell.InitialVolume>V_divide)	divide = true;
@@ -91,8 +91,8 @@ void DivideCell(int parentID, int daughterID, Cell* cells, UniformGrid& Grid, co
 	// divide and create a new cell with ID N_cells
 	divide(parentCell, daughterCell, t);
 
-	const parentCell.InitialVolume = (parentCell.Radius^2)*PI*(parentCell.Length + 4.0/3.0*PI*parentCell.Radius);
-	const daughterCell.InitialVolume = (daughterCell.Radius^2)*PI*(daughterCell.Length + 4.0/3.0*PI*daughterCell.Radius);
+	parentCell.InitialVolume = (parentCell.Radius*parentCell.Radius)*PI*(parentCell.Length + 4.0/3.0*PI*parentCell.Radius);
+	daughterCell.InitialVolume = (daughterCell.Radius*daughterCell.Radius)*PI*(daughterCell.Length + 4.0/3.0*PI*daughterCell.Radius);
 
 	// add mother and daughter to grid
 	Grid.Add(parentID, Grid.GetAddress(average(parentCell.Position)));

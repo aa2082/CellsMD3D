@@ -47,3 +47,6 @@ InterfaceCondition	1
 NutrientGSI	0
 MaxCells	1000000
 refinementGridHeight 2
+
+GrowthProfile	0
+V_divide	2
