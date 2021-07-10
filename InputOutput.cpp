@@ -487,8 +487,8 @@ Inputs ReadParameters(char* fname)
 			varL = atof(var_value);
 		else if (strcmp(var_name,"var_angle")==0)
 			varAngle = atof(var_value);
-        else if (strcmp(var_name,"var_pos")==0)
-            var_pos = atof(var_value);
+    else if (strcmp(var_name,"var_pos")==0)
+        var_pos = atof(var_value);
 		else if (strcmp(var_name,"Viscosity")==0)
 			viscosity = atof(var_value);
 		else if (strcmp(var_name,"Growth_Rate")==0)
@@ -522,10 +522,10 @@ Inputs ReadParameters(char* fname)
 			BoxX = atoi(var_value);
 			BoxY = BoxX;
 		}
-        else if (strcmp(var_name,"maxLevels")==0)
-            maxLevels = atoi(var_value);
-        else if (strcmp(var_name,"refinementGridHeight")==0)
-            refinementGridHeight = atoi(var_value);
+    else if (strcmp(var_name,"maxLevels")==0)
+        maxLevels = atoi(var_value);
+    else if (strcmp(var_name,"refinementGridHeight")==0)
+        refinementGridHeight = atoi(var_value);
 		else if (strcmp(var_name,"Output_Time")==0)
 			OutputTime = atof(var_value);
 		else if (strcmp(var_name,"Update_Time")==0)
@@ -570,8 +570,10 @@ Inputs ReadParameters(char* fname)
 			IniConditions.ColonyNumber = atoi(var_value);
 		else if (strcmp(var_name,"ColonySeparation")==0)
 			IniConditions.ColonySeparation = atof(var_value);
-        else if (strcmp(var_name,"MaxCells")==0)
-            maxCells = atoi(var_value);
+    else if (strcmp(var_name,"MaxCells")==0)
+        maxCells = atoi(var_value);
+    else if (strcmp(var_name,"GrowthProfile")==0)
+        growthProfile = atoi(GrowthProfile);
 		else
 		{
 			printf("Unknown parameter: %s \n", var_name);

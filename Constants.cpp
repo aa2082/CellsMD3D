@@ -57,3 +57,6 @@ int maxIter = 20000;
 int InterfaceCondition = 1; // 1: continuous $\partial C/partial n$; 2: flux continuity with qC; 3: continuous $\partial C/\partial t$;
 bool NutrientGSI = 0;
 int refinementGridHeight = 4;
+
+//growth growth mode
+int growthProfile = 0;

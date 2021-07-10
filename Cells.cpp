@@ -45,7 +45,23 @@ void GrowCell(Cell& cell, int cellID, double dt, int* dividingCells, int& numDiv
 	grow(dt, cell, Env, Wal, Grid);
     int index;
 	// check if cell will divide
-	if (cell.Length>L_divide)
+	// add SWITCH here!
+	bool divide = false;
+	switch (growthProfile) {
+			case 0:
+				// ADDER
+				if(cell.Volume>V_divide)	divide = true;
+				break;
+			case 1:
+				// SIZER
+				if(cell.Length>L_divide)	divide = true;
+				break;
+			case 2:
+				// TIMER
+				if(cell.Age>A_divide)	divide = true;
+				break;
+	}
+	if (divide)
 	{
 #pragma omp critical
         {
@@ -68,7 +84,7 @@ void DivideCell(int parentID, int daughterID, Cell* cells, UniformGrid& Grid, co
 
 	// find stress on the mother cell
 	oldAddress = Grid.GetAddress(average(parentCell.Position));
-	
+
 	// remove the ID from the grid
 	Grid.Remove(parentID, oldAddress);
 

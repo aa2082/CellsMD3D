@@ -5,13 +5,13 @@
 
 // physical variables
 extern double cellRadius;
-extern double L_divide;		
-extern double k_cc;			
-extern double k_wc;		
+extern double L_divide;
+extern double k_cc;
+extern double k_wc;
 extern double varL;
 extern double varAngle;
 extern double var_pos;
-extern double viscosity;		
+extern double viscosity;
 extern double wall_rough;
 extern double gamma_t;
 extern double cell_mu;
@@ -45,7 +45,7 @@ extern int maxCells;	// maximum number of cells in the simulation
 
 // nutrient constants
 extern double Tortuosity;
-extern double KC; 
+extern double KC;
 extern double C_rate;
 extern double DiffColony;
 extern double DiffAgar;
@@ -63,5 +63,7 @@ extern double Rc;
 // colony constants
 extern int refinementGridHeight;
 
+// growth mode
+extern int GrowthProfile;
 
 #endif /* CONSTANTS_H_ */

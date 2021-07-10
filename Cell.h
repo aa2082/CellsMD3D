@@ -10,6 +10,11 @@
 
 #include "tools.h"
 
+/*
+#define ADDER = 0
+#define SIZER = 1
+#define TIMER = 2
+*/
 
 // Cell structure contains information specific to each cell
 struct Cell
@@ -22,10 +27,14 @@ struct Cell
 	DoubleCoord AngularVelocity; // now a vector
 	DoubleCoord DynFric;
 	DoubleCoord StaFric;
-	int p_age = 0;
-	int q_age = 0;
 	int Type;
 	int Ancestor;
+
+	//int growth_mode;	//defines whether cell is either ADDER, SIZER, TIMER
+	int p_age = 0;		//p pole age
+	int q_age = 0; 		//p pole age
+	double Volume; 		//volume of cell
+	double Age;				//time since cell birth
 };
 
 #endif /* CELL_H_ */
