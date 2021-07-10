@@ -1,0 +1,203 @@
+\hypertarget{tools_8h}{}\doxysection{tools.\+h File Reference}
+\label{tools_8h}\index{tools.h@{tools.h}}
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$memory.\+h$>$}\newline
+Include dependency graph for tools.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tools_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tools_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCoord2D}{Coord2\+D$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structCoord3D}{Coord3\+D$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structTensor}{Tensor}}
+\item 
+struct \mbox{\hyperlink{structSegment}{Segment}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{structCoord3D}{Coord3D}}$<$ double $>$ \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}}
+\item 
+typedef \mbox{\hyperlink{structCoord3D}{Coord3D}}$<$ int $>$ \mbox{\hyperlink{tools_8h_ad8fcde08a2bc83ec7847d4c5e1eeed7a}{Int\+Coord}}
+\item 
+typedef \mbox{\hyperlink{structCoord2D}{Coord2D}}$<$ double $>$ \mbox{\hyperlink{tools_8h_a37e8f000955e7ea1cb9999d5c6b5fe89}{Double\+Coord2D}}
+\item 
+typedef \mbox{\hyperlink{structCoord2D}{Coord2D}}$<$ int $>$ \mbox{\hyperlink{tools_8h_a0f2d58faae6b1dc81c91d760594696d7}{Int\+Coord2D}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tools_8h_ab5f6f172af0caef176f7ed21cfdd8ed8}{My\+Assert}} (bool b, const char $\ast$msg)
+\item 
+double \mbox{\hyperlink{tools_8h_a8a59913025a09e714bf550579373c437}{max}} (double n1, double n2)
+\item 
+int \mbox{\hyperlink{tools_8h_a843ad198685b49165b8a2f773d042b41}{max}} (int n1, int n2)
+\item 
+double \mbox{\hyperlink{tools_8h_a03511efc46c51c5ae77304bcd5a88731}{min}} (double n1, double n2)
+\item 
+double \mbox{\hyperlink{tools_8h_ad38c72c671f27fc80c306e0978b8bd6c}{dot}} (const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&v1, const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&v2)
+\item 
+\mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \mbox{\hyperlink{tools_8h_a6c2f167d2b8e4f0744c8c55beef75e97}{cross}} (const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&v1, const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&v2)
+\item 
+\mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \mbox{\hyperlink{tools_8h_af672206476ecdee00ce480b3caf05494}{diff}} (const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&a, const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&b)
+\item 
+\mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \mbox{\hyperlink{tools_8h_ae9f424b3f3c814f2a566e369c384c198}{sum}} (const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&a, const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&b)
+\item 
+\mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \mbox{\hyperlink{tools_8h_a1963eb5cbc292520702d24cfb0ecca13}{scale}} (const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&a, double C)
+\item 
+\mbox{\hyperlink{structSegment}{Segment}} \mbox{\hyperlink{tools_8h_aa5fa9f56bf6865b3df96a574b52aac61}{sum}} (const \mbox{\hyperlink{structSegment}{Segment}} \&a, const \mbox{\hyperlink{structSegment}{Segment}} \&b)
+\item 
+\mbox{\hyperlink{structSegment}{Segment}} \mbox{\hyperlink{tools_8h_added7b132442cdbf1b39e0fecb766cfe}{diff}} (const \mbox{\hyperlink{structSegment}{Segment}} \&a, const \mbox{\hyperlink{structSegment}{Segment}} \&b)
+\item 
+\mbox{\hyperlink{structSegment}{Segment}} \mbox{\hyperlink{tools_8h_a23e7d93ee6022524083169c39af6ed89}{scale}} (const \mbox{\hyperlink{structSegment}{Segment}} \&a, double C)
+\item 
+\mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \mbox{\hyperlink{tools_8h_ab16741bc2b6a9d17eb35a4cf8c86b1cc}{average}} (const \mbox{\hyperlink{structSegment}{Segment}} \&a)
+\item 
+double \mbox{\hyperlink{tools_8h_aa526386fcf6cd3b2b6cb31b535ef4b3f}{linear\+\_\+interp}} (const double y1, const double y2, const double dx)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{tools_8h_a952eac791b596a61bba0a133a3bb439f}{PI}} = 3.\+141592653589793238462643383279502884197
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{tools_8h_a29e60955909f646c4eb5e64139f3195d}\label{tools_8h_a29e60955909f646c4eb5e64139f3195d}} 
+\index{tools.h@{tools.h}!DoubleCoord@{DoubleCoord}}
+\index{DoubleCoord@{DoubleCoord}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{DoubleCoord}{DoubleCoord}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structCoord3D}{Coord3D}}$<$double$>$ \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}}}
+
+\mbox{\Hypertarget{tools_8h_a37e8f000955e7ea1cb9999d5c6b5fe89}\label{tools_8h_a37e8f000955e7ea1cb9999d5c6b5fe89}} 
+\index{tools.h@{tools.h}!DoubleCoord2D@{DoubleCoord2D}}
+\index{DoubleCoord2D@{DoubleCoord2D}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{DoubleCoord2D}{DoubleCoord2D}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structCoord2D}{Coord2D}}$<$double$>$ \mbox{\hyperlink{tools_8h_a37e8f000955e7ea1cb9999d5c6b5fe89}{Double\+Coord2D}}}
+
+\mbox{\Hypertarget{tools_8h_ad8fcde08a2bc83ec7847d4c5e1eeed7a}\label{tools_8h_ad8fcde08a2bc83ec7847d4c5e1eeed7a}} 
+\index{tools.h@{tools.h}!IntCoord@{IntCoord}}
+\index{IntCoord@{IntCoord}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{IntCoord}{IntCoord}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structCoord3D}{Coord3D}}$<$int$>$ \mbox{\hyperlink{tools_8h_ad8fcde08a2bc83ec7847d4c5e1eeed7a}{Int\+Coord}}}
+
+\mbox{\Hypertarget{tools_8h_a0f2d58faae6b1dc81c91d760594696d7}\label{tools_8h_a0f2d58faae6b1dc81c91d760594696d7}} 
+\index{tools.h@{tools.h}!IntCoord2D@{IntCoord2D}}
+\index{IntCoord2D@{IntCoord2D}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{IntCoord2D}{IntCoord2D}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structCoord2D}{Coord2D}}$<$int$>$ \mbox{\hyperlink{tools_8h_a0f2d58faae6b1dc81c91d760594696d7}{Int\+Coord2D}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tools_8h_ab16741bc2b6a9d17eb35a4cf8c86b1cc}\label{tools_8h_ab16741bc2b6a9d17eb35a4cf8c86b1cc}} 
+\index{tools.h@{tools.h}!average@{average}}
+\index{average@{average}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{average()}{average()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} average (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSegment}{Segment}} \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{tools_8h_a6c2f167d2b8e4f0744c8c55beef75e97}\label{tools_8h_a6c2f167d2b8e4f0744c8c55beef75e97}} 
+\index{tools.h@{tools.h}!cross@{cross}}
+\index{cross@{cross}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{cross()}{cross()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} cross (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&}]{v1,  }\item[{const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&}]{v2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{tools_8h_af672206476ecdee00ce480b3caf05494}\label{tools_8h_af672206476ecdee00ce480b3caf05494}} 
+\index{tools.h@{tools.h}!diff@{diff}}
+\index{diff@{diff}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{diff()}{diff()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} diff (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&}]{a,  }\item[{const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{tools_8h_added7b132442cdbf1b39e0fecb766cfe}\label{tools_8h_added7b132442cdbf1b39e0fecb766cfe}} 
+\index{tools.h@{tools.h}!diff@{diff}}
+\index{diff@{diff}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{diff()}{diff()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSegment}{Segment}} diff (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSegment}{Segment}} \&}]{a,  }\item[{const \mbox{\hyperlink{structSegment}{Segment}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{tools_8h_ad38c72c671f27fc80c306e0978b8bd6c}\label{tools_8h_ad38c72c671f27fc80c306e0978b8bd6c}} 
+\index{tools.h@{tools.h}!dot@{dot}}
+\index{dot@{dot}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{dot()}{dot()}}
+{\footnotesize\ttfamily double dot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&}]{v1,  }\item[{const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&}]{v2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{tools_8h_aa526386fcf6cd3b2b6cb31b535ef4b3f}\label{tools_8h_aa526386fcf6cd3b2b6cb31b535ef4b3f}} 
+\index{tools.h@{tools.h}!linear\_interp@{linear\_interp}}
+\index{linear\_interp@{linear\_interp}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{linear\_interp()}{linear\_interp()}}
+{\footnotesize\ttfamily double linear\+\_\+interp (\begin{DoxyParamCaption}\item[{const double}]{y1,  }\item[{const double}]{y2,  }\item[{const double}]{dx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{tools_8h_a8a59913025a09e714bf550579373c437}\label{tools_8h_a8a59913025a09e714bf550579373c437}} 
+\index{tools.h@{tools.h}!max@{max}}
+\index{max@{max}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{max()}{max()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double max (\begin{DoxyParamCaption}\item[{double}]{n1,  }\item[{double}]{n2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{tools_8h_a843ad198685b49165b8a2f773d042b41}\label{tools_8h_a843ad198685b49165b8a2f773d042b41}} 
+\index{tools.h@{tools.h}!max@{max}}
+\index{max@{max}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{max()}{max()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int max (\begin{DoxyParamCaption}\item[{int}]{n1,  }\item[{int}]{n2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{tools_8h_a03511efc46c51c5ae77304bcd5a88731}\label{tools_8h_a03511efc46c51c5ae77304bcd5a88731}} 
+\index{tools.h@{tools.h}!min@{min}}
+\index{min@{min}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily double min (\begin{DoxyParamCaption}\item[{double}]{n1,  }\item[{double}]{n2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{tools_8h_ab5f6f172af0caef176f7ed21cfdd8ed8}\label{tools_8h_ab5f6f172af0caef176f7ed21cfdd8ed8}} 
+\index{tools.h@{tools.h}!MyAssert@{MyAssert}}
+\index{MyAssert@{MyAssert}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{MyAssert()}{MyAssert()}}
+{\footnotesize\ttfamily void My\+Assert (\begin{DoxyParamCaption}\item[{bool}]{b,  }\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{tools_8h_a1963eb5cbc292520702d24cfb0ecca13}\label{tools_8h_a1963eb5cbc292520702d24cfb0ecca13}} 
+\index{tools.h@{tools.h}!scale@{scale}}
+\index{scale@{scale}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} scale (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&}]{a,  }\item[{double}]{C }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{tools_8h_a23e7d93ee6022524083169c39af6ed89}\label{tools_8h_a23e7d93ee6022524083169c39af6ed89}} 
+\index{tools.h@{tools.h}!scale@{scale}}
+\index{scale@{scale}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSegment}{Segment}} scale (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSegment}{Segment}} \&}]{a,  }\item[{double}]{C }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{tools_8h_ae9f424b3f3c814f2a566e369c384c198}\label{tools_8h_ae9f424b3f3c814f2a566e369c384c198}} 
+\index{tools.h@{tools.h}!sum@{sum}}
+\index{sum@{sum}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{sum()}{sum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} sum (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&}]{a,  }\item[{const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{tools_8h_aa5fa9f56bf6865b3df96a574b52aac61}\label{tools_8h_aa5fa9f56bf6865b3df96a574b52aac61}} 
+\index{tools.h@{tools.h}!sum@{sum}}
+\index{sum@{sum}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{sum()}{sum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSegment}{Segment}} sum (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSegment}{Segment}} \&}]{a,  }\item[{const \mbox{\hyperlink{structSegment}{Segment}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{tools_8h_a952eac791b596a61bba0a133a3bb439f}\label{tools_8h_a952eac791b596a61bba0a133a3bb439f}} 
+\index{tools.h@{tools.h}!PI@{PI}}
+\index{PI@{PI}!tools.h@{tools.h}}
+\doxysubsubsection{\texorpdfstring{PI}{PI}}
+{\footnotesize\ttfamily const double PI = 3.\+141592653589793238462643383279502884197}
+

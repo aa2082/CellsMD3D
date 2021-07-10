@@ -1,0 +1,46 @@
+\hypertarget{Integrate_8cpp}{}\doxysection{Integrate.\+cpp File Reference}
+\label{Integrate_8cpp}\index{Integrate.cpp@{Integrate.cpp}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}Cell.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Forces.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Integrate.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tools.\+h\char`\"{}}\newline
+Include dependency graph for Integrate.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Integrate_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Integrate_8cpp_abd5e6e210c87391db0c1ce9036a680ba}{integrate}} (double dt, int cell\+ID, const \mbox{\hyperlink{structCell}{Cell}} $\ast$old\+\_\+cells, \mbox{\hyperlink{structCell}{Cell}} $\ast$new\+\_\+cells, const int $\ast$neighbours, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Height, \mbox{\hyperlink{Array_8h_a11597f1ff824ac0aeb5cb4f60f66e366}{Coord\+Array2D}} \&Normal, \mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&Grid, const \mbox{\hyperlink{tools_8h_ad8fcde08a2bc83ec7847d4c5e1eeed7a}{Int\+Coord}} \&XYAddress, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Wall)
+\item 
+void \mbox{\hyperlink{Integrate_8cpp_aa22f0bd039da9eb29db7e08f2fe14c74}{Update\+Positions}} (double dt, const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&F, \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&T, const \mbox{\hyperlink{structCell}{Cell}} \&old\+\_\+cell, \mbox{\hyperlink{structCell}{Cell}} \&new\+\_\+cell)
+\item 
+void \mbox{\hyperlink{Integrate_8cpp_ad43ededb50f03635818fe6190bf8a337}{Update\+Velocities}} (double dt, const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&F, \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&T, const \mbox{\hyperlink{structCell}{Cell}} \&old\+\_\+cell, \mbox{\hyperlink{structCell}{Cell}} \&new\+\_\+cell)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Integrate_8cpp_abd5e6e210c87391db0c1ce9036a680ba}\label{Integrate_8cpp_abd5e6e210c87391db0c1ce9036a680ba}} 
+\index{Integrate.cpp@{Integrate.cpp}!integrate@{integrate}}
+\index{integrate@{integrate}!Integrate.cpp@{Integrate.cpp}}
+\doxysubsubsection{\texorpdfstring{integrate()}{integrate()}}
+{\footnotesize\ttfamily void integrate (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{int}]{cell\+ID,  }\item[{const \mbox{\hyperlink{structCell}{Cell}} $\ast$}]{old\+\_\+cells,  }\item[{\mbox{\hyperlink{structCell}{Cell}} $\ast$}]{new\+\_\+cells,  }\item[{const int $\ast$}]{neighbours,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Height,  }\item[{\mbox{\hyperlink{Array_8h_a11597f1ff824ac0aeb5cb4f60f66e366}{Coord\+Array2D}} \&}]{Normal,  }\item[{\mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&}]{Grid,  }\item[{const \mbox{\hyperlink{tools_8h_ad8fcde08a2bc83ec7847d4c5e1eeed7a}{Int\+Coord}} \&}]{XYAddress,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Wall }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Integrate_8cpp_aa22f0bd039da9eb29db7e08f2fe14c74}\label{Integrate_8cpp_aa22f0bd039da9eb29db7e08f2fe14c74}} 
+\index{Integrate.cpp@{Integrate.cpp}!UpdatePositions@{UpdatePositions}}
+\index{UpdatePositions@{UpdatePositions}!Integrate.cpp@{Integrate.cpp}}
+\doxysubsubsection{\texorpdfstring{UpdatePositions()}{UpdatePositions()}}
+{\footnotesize\ttfamily void Update\+Positions (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&}]{F,  }\item[{\mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&}]{T,  }\item[{const \mbox{\hyperlink{structCell}{Cell}} \&}]{old\+\_\+cell,  }\item[{\mbox{\hyperlink{structCell}{Cell}} \&}]{new\+\_\+cell }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Integrate_8cpp_ad43ededb50f03635818fe6190bf8a337}\label{Integrate_8cpp_ad43ededb50f03635818fe6190bf8a337}} 
+\index{Integrate.cpp@{Integrate.cpp}!UpdateVelocities@{UpdateVelocities}}
+\index{UpdateVelocities@{UpdateVelocities}!Integrate.cpp@{Integrate.cpp}}
+\doxysubsubsection{\texorpdfstring{UpdateVelocities()}{UpdateVelocities()}}
+{\footnotesize\ttfamily void Update\+Velocities (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&}]{F,  }\item[{\mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&}]{T,  }\item[{const \mbox{\hyperlink{structCell}{Cell}} \&}]{old\+\_\+cell,  }\item[{\mbox{\hyperlink{structCell}{Cell}} \&}]{new\+\_\+cell }\end{DoxyParamCaption})}
+

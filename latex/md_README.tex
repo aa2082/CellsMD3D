@@ -1,0 +1,80 @@
+\doxysubparagraph*{}\hypertarget{md_README_autotoc_md1}{}\doxysection{how to compile and run the cpp code?}\label{md_README_autotoc_md1}
+\hypertarget{md_README_autotoc_md2}{}\doxysection{(1) compile the code\+:}\label{md_README_autotoc_md2}
+\hypertarget{md_README_autotoc_md3}{}\doxysection{\$$>$ cd run\+\_\+sim}\label{md_README_autotoc_md3}
+\hypertarget{md_README_autotoc_md4}{}\doxysection{\$$>$ g++ ../$\ast$.\+cpp -\/fopenmp -\/\+O3}\label{md_README_autotoc_md4}
+\hypertarget{md_README_autotoc_md5}{}\doxysection{(2) run the code\+:}\label{md_README_autotoc_md5}
+\hypertarget{md_README_autotoc_md6}{}\doxysection{\$$>$ ./a.\+out in1.\+txt 2 /\+Direcotry/\+To/\+Output/\+Folder $>$ /\+Redirect/\+Console/\+Output \&}\label{md_README_autotoc_md6}
+\hypertarget{md_README_autotoc_md7}{}\doxyparagraph{The command line argument in1.\+txt is the input txt file.}\label{md_README_autotoc_md7}
+\hypertarget{md_README_autotoc_md8}{}\doxyparagraph{The command line argument 2 means we run this code using 2 cores. You can change it to some other numbers.}\label{md_README_autotoc_md8}
+\hypertarget{md_README_autotoc_md9}{}\doxyparagraph{The command line argument \char`\"{}/\+Direcotry/\+To/\+Output/\+Folder\char`\"{} is the directory to output the data.}\label{md_README_autotoc_md9}
+\hypertarget{md_README_autotoc_md10}{}\doxyparagraph{The command line argument \char`\"{}$>$ /\+Redirect/\+Console/\+Output \&\char`\"{} means console outpout gets redirected to \char`\"{}/\+Redirect/\+Console/\+Output\char`\"{}, and the program runs in background.}\label{md_README_autotoc_md10}
+\doxysubparagraph*{}\hypertarget{md_README_autotoc_md11}{}\doxysection{don\textquotesingle{}t blow up the memory}\label{md_README_autotoc_md11}
+\hypertarget{md_README_autotoc_md12}{}\doxysection{If you run the code in a local machine, and you don\textquotesingle{}t want to take up too much memory, you need to set the variable Max\+Cells to be small, say 100000. If you set it to be 3 millions, then it might take up a lot of memory.}\label{md_README_autotoc_md12}
+\hypertarget{md_README_autotoc_md13}{}\doxysection{To adjust Max\+Cells, you just go to in1.\+txt, and change the integer number that is next to \char`\"{}\+Max\+Cells\char`\"{}.}\label{md_README_autotoc_md13}
+\doxysubparagraph*{}\hypertarget{md_README_autotoc_md14}{}\doxysection{how is the data output?}\label{md_README_autotoc_md14}
+\hypertarget{md_README_autotoc_md15}{}\doxysection{We have a global variable Dir\+Name (\+Defined in Constants.\+h), which takes in the 4th command line argument. The output is stored in the path given by Dir\+Name.}\label{md_README_autotoc_md15}
+\hypertarget{md_README_autotoc_md16}{}\doxysection{Under the Dir\+Name, there will be folders as the following\+:}\label{md_README_autotoc_md16}
+\hypertarget{md_README_autotoc_md17}{}\doxysection{Agar\+Field     Density       Density2      Height        Restart       Rough\+Density1 Wall\+Density   Wall\+Density2  lineage}\label{md_README_autotoc_md17}
+\hypertarget{md_README_autotoc_md18}{}\doxysection{Cells         Density1      Environment   Normal        Rough\+Density  Rough\+Density2 Wall\+Density1  Wall\+Field}\label{md_README_autotoc_md18}
+\hypertarget{md_README_autotoc_md19}{}\doxysection{In each folder, there will be data files such as\+:}\label{md_README_autotoc_md19}
+\hypertarget{md_README_autotoc_md20}{}\doxysection{0.\+txt   110.\+txt 123.\+txt 136.\+txt 149.\+txt 161.\+txt 174.\+txt 187.\+txt 2.\+txt   211.\+txt 224.\+txt 237.\+txt 25.\+txt  262.\+txt 275.\+txt 4.\+txt   52.\+txt  65.\+txt  78.\+txt  90.\+txt}\label{md_README_autotoc_md20}
+\hypertarget{md_README_autotoc_md21}{}\doxysection{1.\+txt   111.\+txt 124.\+txt 137.\+txt 15.\+txt  162.\+txt 175.\+txt 188.\+txt 20.\+txt  212.\+txt 225.\+txt 238.\+txt 250.\+txt 263.\+txt 28.\+txt  40.\+txt  53.\+txt  66.\+txt  79.\+txt  91.\+txt}\label{md_README_autotoc_md21}
+\hypertarget{md_README_autotoc_md22}{}\doxysection{10.\+txt  112.\+txt 125.\+txt 138.\+txt 150.\+txt 163.\+txt 176.\+txt 189.\+txt 200.\+txt 213.\+txt 226.\+txt 239.\+txt 251.\+txt 264.\+txt 29.\+txt  41.\+txt  54.\+txt  67.\+txt  8.\+txt   92.\+txt}\label{md_README_autotoc_md22}
+\hypertarget{md_README_autotoc_md23}{}\doxysection{100.\+txt 113.\+txt 126.\+txt 139.\+txt 151.\+txt 164.\+txt 177.\+txt 19.\+txt  201.\+txt 214.\+txt 227.\+txt 24.\+txt  252.\+txt 265.\+txt 3.\+txt   42.\+txt  55.\+txt  68.\+txt  80.\+txt  93.\+txt}\label{md_README_autotoc_md23}
+\hypertarget{md_README_autotoc_md24}{}\doxysection{101.\+txt 114.\+txt 127.\+txt 14.\+txt  152.\+txt 165.\+txt 178.\+txt 190.\+txt 202.\+txt 215.\+txt 228.\+txt 240.\+txt 253.\+txt 266.\+txt 30.\+txt  43.\+txt  56.\+txt  69.\+txt  81.\+txt  94.\+txt}\label{md_README_autotoc_md24}
+\hypertarget{md_README_autotoc_md25}{}\doxysection{102.\+txt 115.\+txt 128.\+txt 140.\+txt 153.\+txt 166.\+txt 179.\+txt 191.\+txt 203.\+txt 216.\+txt 229.\+txt 241.\+txt 254.\+txt 267.\+txt 31.\+txt  44.\+txt  57.\+txt  7.\+txt   82.\+txt  95.\+txt}\label{md_README_autotoc_md25}
+\hypertarget{md_README_autotoc_md26}{}\doxysection{103.\+txt 116.\+txt 129.\+txt 141.\+txt 154.\+txt 167.\+txt 18.\+txt  192.\+txt 204.\+txt 217.\+txt 23.\+txt  242.\+txt 255.\+txt 268.\+txt 32.\+txt  45.\+txt  58.\+txt  70.\+txt  83.\+txt  96.\+txt}\label{md_README_autotoc_md26}
+\hypertarget{md_README_autotoc_md27}{}\doxysection{104.\+txt 117.\+txt 13.\+txt  142.\+txt 155.\+txt 168.\+txt 180.\+txt 193.\+txt 205.\+txt 218.\+txt 230.\+txt 243.\+txt 256.\+txt 269.\+txt 33.\+txt  46.\+txt  59.\+txt  71.\+txt  84.\+txt  97.\+txt}\label{md_README_autotoc_md27}
+\hypertarget{md_README_autotoc_md28}{}\doxysection{105.\+txt 118.\+txt 130.\+txt 143.\+txt 156.\+txt 169.\+txt 181.\+txt 194.\+txt 206.\+txt 219.\+txt 231.\+txt 244.\+txt 257.\+txt 27.\+txt  34.\+txt  47.\+txt  6.\+txt   72.\+txt  85.\+txt  98.\+txt}\label{md_README_autotoc_md28}
+\hypertarget{md_README_autotoc_md29}{}\doxysection{106.\+txt 119.\+txt 131.\+txt 144.\+txt 157.\+txt 17.\+txt  182.\+txt 195.\+txt 207.\+txt 22.\+txt  232.\+txt 245.\+txt 258.\+txt 270.\+txt 35.\+txt  48.\+txt  60.\+txt  73.\+txt  86.\+txt  99.\+txt}\label{md_README_autotoc_md29}
+\hypertarget{md_README_autotoc_md30}{}\doxysection{107.\+txt 12.\+txt  132.\+txt 145.\+txt 158.\+txt 170.\+txt 183.\+txt 196.\+txt 208.\+txt 220.\+txt 233.\+txt 246.\+txt 259.\+txt 271.\+txt 36.\+txt  49.\+txt  61.\+txt  74.\+txt  87.\+txt}\label{md_README_autotoc_md30}
+\hypertarget{md_README_autotoc_md31}{}\doxysection{108.\+txt 120.\+txt 133.\+txt 146.\+txt 159.\+txt 171.\+txt 184.\+txt 197.\+txt 209.\+txt 221.\+txt 234.\+txt 247.\+txt 26.\+txt  272.\+txt 37.\+txt  5.\+txt   62.\+txt  75.\+txt  88.\+txt}\label{md_README_autotoc_md31}
+\hypertarget{md_README_autotoc_md32}{}\doxysection{109.\+txt 121.\+txt 134.\+txt 147.\+txt 16.\+txt  172.\+txt 185.\+txt 198.\+txt 21.\+txt  222.\+txt 235.\+txt 248.\+txt 260.\+txt 273.\+txt 38.\+txt  50.\+txt  63.\+txt  76.\+txt  89.\+txt}\label{md_README_autotoc_md32}
+\hypertarget{md_README_autotoc_md33}{}\doxysection{11.\+txt  122.\+txt 135.\+txt 148.\+txt 160.\+txt 173.\+txt 186.\+txt 199.\+txt 210.\+txt 223.\+txt 236.\+txt 249.\+txt 261.\+txt 274.\+txt 39.\+txt  51.\+txt  64.\+txt  77.\+txt  9.\+txt}\label{md_README_autotoc_md33}
+\doxysubparagraph*{}\hypertarget{md_README_autotoc_md34}{}\doxysection{how to visualize the output data?}\label{md_README_autotoc_md34}
+\hypertarget{md_README_autotoc_md35}{}\doxysection{We visualize the data using MATLAB, and in this section, we will write MATLAB commands\+:}\label{md_README_autotoc_md35}
+\hypertarget{md_README_autotoc_md36}{}\doxysection{You can load the data by something like the following\+:}\label{md_README_autotoc_md36}
+\hypertarget{md_README_autotoc_md37}{}\doxysection{\$$>$ dir\+\_\+cells=\textquotesingle{}/\+Direcotry/\+To/\+Output/\+Folder\textquotesingle{};}\label{md_README_autotoc_md37}
+\hypertarget{md_README_autotoc_md38}{}\doxysection{\$$>$ i\+\_\+cells=250;}\label{md_README_autotoc_md38}
+\hypertarget{md_README_autotoc_md39}{}\doxysection{\$$>$ cells=load(sprintf(\textquotesingle{}\%s/\+Cells/\%d.\+txt\textquotesingle{},dir\+\_\+cells,i\+\_\+cells));}\label{md_README_autotoc_md39}
+\hypertarget{md_README_autotoc_md40}{}\doxysection{You can find out the indices of the cells whose center of mass has height less than 2um by the following command\+:}\label{md_README_autotoc_md40}
+\hypertarget{md_README_autotoc_md41}{}\doxysection{\$$>$ dh = 2;}\label{md_README_autotoc_md41}
+\hypertarget{md_README_autotoc_md42}{}\doxysection{\$$>$ i\+\_\+btm = find((cells(\+:,6)+cells(\+:,9))/2$<$dh);}\label{md_README_autotoc_md42}
+\hypertarget{md_README_autotoc_md43}{}\doxysection{You can find out the indices of cells whose center of mass has height less than 2um, with type 1 and type 2 by the following command\+:}\label{md_README_autotoc_md43}
+\hypertarget{md_README_autotoc_md44}{}\doxysection{\$$>$ i1 = find(cells(i\+\_\+btm,3)==1);}\label{md_README_autotoc_md44}
+\hypertarget{md_README_autotoc_md45}{}\doxysection{\$$>$ i2 = find(cells(i\+\_\+btm,3)==2);}\label{md_README_autotoc_md45}
+\hypertarget{md_README_autotoc_md46}{}\doxysection{You can plot all such cells with stick representation and different color by the following command\+:}\label{md_README_autotoc_md46}
+\hypertarget{md_README_autotoc_md47}{}\doxysection{\$$>$ quiver3(cells(i\+\_\+btm(i1),4), cells(i\+\_\+btm(i1),5), cells(i\+\_\+btm(i1),6), cells(i\+\_\+btm(i1),7)-\/cells(i\+\_\+btm(i1),4), cells(i\+\_\+btm(i1),8)-\/cells(i\+\_\+btm(i1),5), cells(i\+\_\+btm(i1),9)-\/cells(i\+\_\+btm(i1),6), \textquotesingle{}b\textquotesingle{}, \textquotesingle{}\+Show\+Arrow\+Head\textquotesingle{},\textquotesingle{}off\textquotesingle{}, \textquotesingle{}\+Autoscale\textquotesingle{},\textquotesingle{}off\textquotesingle{});}\label{md_README_autotoc_md47}
+\hypertarget{md_README_autotoc_md48}{}\doxysection{\$$>$ hold on;}\label{md_README_autotoc_md48}
+\hypertarget{md_README_autotoc_md49}{}\doxysection{\$$>$ quiver3(cells(i\+\_\+btm(i2),4), cells(i\+\_\+btm(i2),5), cells(i\+\_\+btm(i2),6), cells(i\+\_\+btm(i2),7)-\/cells(i\+\_\+btm(i2),4), cells(i\+\_\+btm(i2),8)-\/cells(i\+\_\+btm(i2),5), cells(i\+\_\+btm(i2),9)-\/cells(i\+\_\+btm(i2),6), \textquotesingle{}r\textquotesingle{}, \textquotesingle{}\+Show\+Arrow\+Head\textquotesingle{},\textquotesingle{}off\textquotesingle{}, \textquotesingle{}\+Autoscale\textquotesingle{},\textquotesingle{}off\textquotesingle{});}\label{md_README_autotoc_md49}
+\hypertarget{md_README_autotoc_md50}{}\doxysection{You can adjust the view angles of the plot by\+:}\label{md_README_autotoc_md50}
+\hypertarget{md_README_autotoc_md51}{}\doxysection{\$$>$ view(0,90);}\label{md_README_autotoc_md51}
+\doxysubparagraph*{}\hypertarget{md_README_autotoc_md52}{}\doxysection{where is the information about cell division, cell age stored?}\label{md_README_autotoc_md52}
+\hypertarget{md_README_autotoc_md53}{}\doxysection{Cell ages and division time of the two ends are stored in columns 24-\/27 of the output files under Cells folder. You may refer to the last a few lines of Input\+Output.\+cpp for more details.}\label{md_README_autotoc_md53}
+\doxysubparagraph*{}\hypertarget{md_README_autotoc_md54}{}\doxysection{how do I set the level of grids and choose the Box\+\_\+x, Box\+\_\+y, Box\+\_\+z, and Box\+\_\+z\+\_\+agar?}\label{md_README_autotoc_md54}
+\hypertarget{md_README_autotoc_md55}{}\doxysection{There is a parameter max\+Levels in in1.\+txt file that specifies the level of grids. I usually choose max\+Levels to be 2$\sim$4. Usually we want Box\+\_\+x=\+Box\+\_\+y with mod(\+Box\+\_\+x,4)=0, and mod(\+Box\+\_\+z\+\_\+agar,4)=0.}\label{md_README_autotoc_md55}
+\doxysubparagraph*{}\hypertarget{md_README_autotoc_md56}{}\doxysection{how shall I properly read the Agar\+Field and Wall\+Field data? (\+Let\textquotesingle{}s assume that we have Box\+\_\+x=\+Box\+\_\+y=128 and Box\+\_\+z\+\_\+agar=20)}\label{md_README_autotoc_md56}
+\hypertarget{md_README_autotoc_md57}{}\doxysection{Read the Agar\+Field data\+:}\label{md_README_autotoc_md57}
+\hypertarget{md_README_autotoc_md58}{}\doxysection{\$$>$ agar=load(sprintf(\textquotesingle{}\%s/\+Agar\+Field/\%d.\+txt\textquotesingle{},dir\+\_\+cells,i\+\_\+cells));}\label{md_README_autotoc_md58}
+\hypertarget{md_README_autotoc_md59}{}\doxysection{break the data into trunks (corresponds to different levels of the grid)\+:}\label{md_README_autotoc_md59}
+\hypertarget{md_README_autotoc_md60}{}\doxysection{\$$>$ agar0=agar(1\+:end/4,\+:);}\label{md_README_autotoc_md60}
+\hypertarget{md_README_autotoc_md61}{}\doxysection{\$$>$ agar1=agar(1+end/4\+:end/2,\+:);}\label{md_README_autotoc_md61}
+\hypertarget{md_README_autotoc_md62}{}\doxysection{\$$>$ agar2=agar(1+end/2\+:end$\ast$3/4,\+:);}\label{md_README_autotoc_md62}
+\hypertarget{md_README_autotoc_md63}{}\doxysection{\$$>$ agar3=agar(1+end$\ast$3/4\+:end,\+:);}\label{md_README_autotoc_md63}
+\hypertarget{md_README_autotoc_md64}{}\doxysection{reshape the matrices\+:}\label{md_README_autotoc_md64}
+\hypertarget{md_README_autotoc_md65}{}\doxysection{\$$>$ agar0=reshape(agar0, Box\+\_\+y, 2$\ast$\+Box\+\_\+z\+\_\+agar, Box\+\_\+x);}\label{md_README_autotoc_md65}
+\hypertarget{md_README_autotoc_md66}{}\doxysection{\$$>$ agar1=reshape(agar1, Box\+\_\+y, 2$\ast$\+Box\+\_\+z\+\_\+agar, Box\+\_\+x);}\label{md_README_autotoc_md66}
+\hypertarget{md_README_autotoc_md67}{}\doxysection{\$$>$ agar2=reshape(agar2, Box\+\_\+y, 2$\ast$\+Box\+\_\+z\+\_\+agar, Box\+\_\+x);}\label{md_README_autotoc_md67}
+\hypertarget{md_README_autotoc_md68}{}\doxysection{\$$>$ agar3=reshape(agar3, Box\+\_\+y, 2$\ast$\+Box\+\_\+z\+\_\+agar, Box\+\_\+x);}\label{md_README_autotoc_md68}
+\hypertarget{md_README_autotoc_md69}{}\doxysection{Define the carbon fields\+:}\label{md_README_autotoc_md69}
+\hypertarget{md_README_autotoc_md70}{}\doxysection{\$$>$ carb0=agar0(\+:,1\+:end/2,\+:);}\label{md_README_autotoc_md70}
+\hypertarget{md_README_autotoc_md71}{}\doxysection{\$$>$ carb1=agar1(\+:,1\+:end/2,\+:);}\label{md_README_autotoc_md71}
+\hypertarget{md_README_autotoc_md72}{}\doxysection{\$$>$ carb2=agar2(\+:,1\+:end/2,\+:);}\label{md_README_autotoc_md72}
+\hypertarget{md_README_autotoc_md73}{}\doxysection{\$$>$ carb3=agar3(\+:,1\+:end/2,\+:);}\label{md_README_autotoc_md73}
+\hypertarget{md_README_autotoc_md74}{}\doxysection{Then we fill in the part of higher level grid that should be covered by the lower level grid\+:}\label{md_README_autotoc_md74}
+\hypertarget{md_README_autotoc_md75}{}\doxysection{\$$>$ carb1(\+Box\+\_\+y/4+1\+:\+Box\+\_\+y$\ast$3/4, 1\+:\+Box\+\_\+z\+\_\+agar/2, Box\+\_\+x/4+1\+:\+Box\+\_\+x$\ast$3/4)=carb0(1\+:2\+:\+Box\+\_\+y, 2\+:2\+:\+Box\+\_\+z\+\_\+agar, 1\+:2\+:\+Box\+\_\+x);}\label{md_README_autotoc_md75}
+\hypertarget{md_README_autotoc_md76}{}\doxysection{\$$>$ carb2(\+Box\+\_\+y/4+1\+:\+Box\+\_\+y$\ast$3/4, 1\+:\+Box\+\_\+z\+\_\+agar/2, Box\+\_\+x/4+1\+:\+Box\+\_\+x$\ast$3/4)=carb1(1\+:2\+:\+Box\+\_\+y, 2\+:2\+:\+Box\+\_\+z\+\_\+agar, 1\+:2\+:\+Box\+\_\+x);}\label{md_README_autotoc_md76}
+\hypertarget{md_README_autotoc_md77}{}\doxysection{\$$>$ carb3(\+Box\+\_\+y/4+1\+:\+Box\+\_\+y$\ast$3/4, 1\+:\+Box\+\_\+z\+\_\+agar/2, Box\+\_\+x/4+1\+:\+Box\+\_\+x$\ast$3/4)=carb2(1\+:2\+:\+Box\+\_\+y, 2\+:2\+:\+Box\+\_\+z\+\_\+agar, 1\+:2\+:\+Box\+\_\+x);}\label{md_README_autotoc_md77}
+\hypertarget{md_README_autotoc_md78}{}\doxysection{Then you can visualize the carbon field data in different levels, for example\+:}\label{md_README_autotoc_md78}
+\hypertarget{md_README_autotoc_md79}{}\doxysection{\$$>$ imagesc(reshape(carb1(\+:,1,\+:), Box\+\_\+y, Box\+\_\+x));}\label{md_README_autotoc_md79}
+\hypertarget{md_README_autotoc_md80}{}\doxysection{\$$>$ imagesc(reshape(carb2(\+Box\+\_\+y/2,\+:,\+:), Box\+\_\+z\+\_\+agar, Box\+\_\+x));}\label{md_README_autotoc_md80}

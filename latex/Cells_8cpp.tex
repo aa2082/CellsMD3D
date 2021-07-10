@@ -1,0 +1,49 @@
+\hypertarget{Cells_8cpp}{}\doxysection{Cells.\+cpp File Reference}
+\label{Cells_8cpp}\index{Cells.cpp@{Cells.cpp}}
+{\ttfamily \#include \char`\"{}Cells.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Compute.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Forces.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grow.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Integrate.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Constants.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Uniform\+Grid.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Cell.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$omp.\+h$>$}\newline
+Include dependency graph for Cells.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Cells_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Cells_8cpp_af340b359b967efe9dc939d452b7c3105}{Move\+Cell}} (int cell\+ID, \mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&Grid, const \mbox{\hyperlink{structCell}{Cell}} $\ast$old\+\_\+cells, \mbox{\hyperlink{structCell}{Cell}} $\ast$new\+\_\+cells, const int $\ast$neighbours, double dt, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Height, \mbox{\hyperlink{Array_8h_a11597f1ff824ac0aeb5cb4f60f66e366}{Coord\+Array2D}} \&Normal, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Wall)
+\item 
+void \mbox{\hyperlink{Cells_8cpp_a67b13ac0a0bac87a101bbbf90b02e84c}{Grow\+Cell}} (\mbox{\hyperlink{structCell}{Cell}} \&cell, int cell\+ID, double dt, int $\ast$dividing\+Cells, int \&num\+Divide, \mbox{\hyperlink{Array_8h_a8684ce7c56ae35bf4e8ef138ac2991b7}{Env\+Array3D}} \&Env, \mbox{\hyperlink{Array_8h_ab5e797ad34d902b3c47d6cdb5e9a179c}{Aga\+Array2D}} $\ast$$\ast$Wal, \mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&Grid)
+\item 
+void \mbox{\hyperlink{Cells_8cpp_a81e9cb0ef5170a74fdd0e1c8c6109621}{Divide\+Cell}} (int parent\+ID, int daughter\+ID, \mbox{\hyperlink{structCell}{Cell}} $\ast$cells, \mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&Grid, const int $\ast$neighbours, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Wall, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Height, \mbox{\hyperlink{Array_8h_a11597f1ff824ac0aeb5cb4f60f66e366}{Coord\+Array2D}} \&Normal, double t)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Cells_8cpp_a81e9cb0ef5170a74fdd0e1c8c6109621}\label{Cells_8cpp_a81e9cb0ef5170a74fdd0e1c8c6109621}} 
+\index{Cells.cpp@{Cells.cpp}!DivideCell@{DivideCell}}
+\index{DivideCell@{DivideCell}!Cells.cpp@{Cells.cpp}}
+\doxysubsubsection{\texorpdfstring{DivideCell()}{DivideCell()}}
+{\footnotesize\ttfamily void Divide\+Cell (\begin{DoxyParamCaption}\item[{int}]{parent\+ID,  }\item[{int}]{daughter\+ID,  }\item[{\mbox{\hyperlink{structCell}{Cell}} $\ast$}]{cells,  }\item[{\mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&}]{Grid,  }\item[{const int $\ast$}]{neighbours,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Wall,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Height,  }\item[{\mbox{\hyperlink{Array_8h_a11597f1ff824ac0aeb5cb4f60f66e366}{Coord\+Array2D}} \&}]{Normal,  }\item[{double}]{t }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Cells_8cpp_a67b13ac0a0bac87a101bbbf90b02e84c}\label{Cells_8cpp_a67b13ac0a0bac87a101bbbf90b02e84c}} 
+\index{Cells.cpp@{Cells.cpp}!GrowCell@{GrowCell}}
+\index{GrowCell@{GrowCell}!Cells.cpp@{Cells.cpp}}
+\doxysubsubsection{\texorpdfstring{GrowCell()}{GrowCell()}}
+{\footnotesize\ttfamily void Grow\+Cell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCell}{Cell}} \&}]{cell,  }\item[{int}]{cell\+ID,  }\item[{double}]{dt,  }\item[{int $\ast$}]{dividing\+Cells,  }\item[{int \&}]{num\+Divide,  }\item[{\mbox{\hyperlink{Array_8h_a8684ce7c56ae35bf4e8ef138ac2991b7}{Env\+Array3D}} \&}]{Env,  }\item[{\mbox{\hyperlink{Array_8h_ab5e797ad34d902b3c47d6cdb5e9a179c}{Aga\+Array2D}} $\ast$$\ast$}]{Wal,  }\item[{\mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&}]{Grid }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Cells_8cpp_af340b359b967efe9dc939d452b7c3105}\label{Cells_8cpp_af340b359b967efe9dc939d452b7c3105}} 
+\index{Cells.cpp@{Cells.cpp}!MoveCell@{MoveCell}}
+\index{MoveCell@{MoveCell}!Cells.cpp@{Cells.cpp}}
+\doxysubsubsection{\texorpdfstring{MoveCell()}{MoveCell()}}
+{\footnotesize\ttfamily void Move\+Cell (\begin{DoxyParamCaption}\item[{int}]{cell\+ID,  }\item[{\mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&}]{Grid,  }\item[{const \mbox{\hyperlink{structCell}{Cell}} $\ast$}]{old\+\_\+cells,  }\item[{\mbox{\hyperlink{structCell}{Cell}} $\ast$}]{new\+\_\+cells,  }\item[{const int $\ast$}]{neighbours,  }\item[{double}]{dt,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Height,  }\item[{\mbox{\hyperlink{Array_8h_a11597f1ff824ac0aeb5cb4f60f66e366}{Coord\+Array2D}} \&}]{Normal,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Wall }\end{DoxyParamCaption})}
+

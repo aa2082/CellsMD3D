@@ -1,0 +1,92 @@
+\hypertarget{Compute_8h}{}\doxysection{Compute.\+h File Reference}
+\label{Compute_8h}\index{Compute.h@{Compute.h}}
+{\ttfamily \#include \char`\"{}Uniform\+Grid.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Array.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Cell.\+h\char`\"{}}\newline
+Include dependency graph for Compute.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Compute_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{Compute_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Compute_8h_a8750b4dff389d67fab66aacf440ee62e}{mean\+\_\+stress}} (const \mbox{\hyperlink{structCell}{Cell}} \&cell, const \mbox{\hyperlink{structCell}{Cell}} $\ast$cell\+\_\+array, const int $\ast$neighbours, \mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&Grid, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Wall, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Height, \mbox{\hyperlink{Array_8h_a11597f1ff824ac0aeb5cb4f60f66e366}{Coord\+Array2D}} \&Normal, \mbox{\hyperlink{structTensor}{Tensor}} \&stress\+Tensor, \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&Fnet)
+\item 
+void \mbox{\hyperlink{Compute_8h_af39a1f05b3e5ab0988499c3a466995ca}{Get\+Density}} (\mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&Density\+Vec, \mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&Density1\+Vec, \mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&Density2\+Vec, \mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&inside\+Colony\+Den, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Height, \mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&Grid, \mbox{\hyperlink{structCell}{Cell}} $\ast$cells, int \&minx, int \&maxx, int \&miny, int \&maxy, int \&maxz)
+\item 
+void \mbox{\hyperlink{Compute_8h_a3bd63f555094e655b4f7404a63aac3cc}{Get\+Height}} (\mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&Density\+Vec, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Height, \mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&Grid, \mbox{\hyperlink{structCell}{Cell}} $\ast$cells, int \&minx, int \&maxx, int \&miny, int \&maxy, int \&maxz)
+\item 
+void \mbox{\hyperlink{Compute_8h_ab98b89fc1398f8d8fb23540783dc0fe7}{Shift\+Density}} (\mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&Density\+Vec, \mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&Density1\+Vec, \mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&Density2\+Vec, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Density\+Wall\+Vec, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Density\+Wall\+Vec1, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Density\+Wall\+Vec2, \mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&Density\+Vec\+ShiftP, \mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&Density1\+Vec\+ShiftP, \mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&Density2\+Vec\+ShiftP, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Density\+Wall\+Vec\+ShiftP, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Density\+Wall\+Vec1\+ShiftP, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Density\+Wall\+Vec2\+ShiftP, int \mbox{\hyperlink{Constants_8h_a8b7b59e20c0994e1c1309268294eb4cb}{BoxX}}, int \mbox{\hyperlink{Constants_8h_aa9183cfb267446f291f5b88ea4aac9d7}{BoxY}}, int \mbox{\hyperlink{Constants_8h_a1cffa0eef31b31f1a6e34c0655ebd118}{BoxZ}})
+\item 
+void \mbox{\hyperlink{Compute_8h_ae0773142295a09947e259f9c0c517350}{Get\+Surface\+Normal}} (\mbox{\hyperlink{Array_8h_a11597f1ff824ac0aeb5cb4f60f66e366}{Coord\+Array2D}} \&Normal, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Height, int minX, int maxX, int minY, int maxY)
+\item 
+void \mbox{\hyperlink{Compute_8h_a1b84c77ee68601e28bffeaa9a55f50f0}{Box\+Average}} (\mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&Rough\+Density, \mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&Density, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Rough\+Wall\+Density, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Wall\+Density, \mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&Filter, int Filter\+Dim, int minx, int maxx, int miny, int maxy, int maxz, int \mbox{\hyperlink{Constants_8h_a8b7b59e20c0994e1c1309268294eb4cb}{BoxX}}, int \mbox{\hyperlink{Constants_8h_aa9183cfb267446f291f5b88ea4aac9d7}{BoxY}}, int \mbox{\hyperlink{Constants_8h_a1cffa0eef31b31f1a6e34c0655ebd118}{BoxZ}})
+\item 
+void \mbox{\hyperlink{Compute_8h_a809f7acf1e7528c69a10f2d2a43af660}{Height\+\_\+\+Average}} (\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&In\+Height, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Out\+Height, int minx, int maxx, int miny, int maxy)
+\item 
+void \mbox{\hyperlink{Compute_8h_aa46893f39241e6610cee1cafde3ac431}{Smooth}} (\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&In\+Array, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Out\+Array, \mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&Filter, int Filter\+Dim, int minx, int maxx, int miny, int maxy)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Compute_8h_a1b84c77ee68601e28bffeaa9a55f50f0}\label{Compute_8h_a1b84c77ee68601e28bffeaa9a55f50f0}} 
+\index{Compute.h@{Compute.h}!BoxAverage@{BoxAverage}}
+\index{BoxAverage@{BoxAverage}!Compute.h@{Compute.h}}
+\doxysubsubsection{\texorpdfstring{BoxAverage()}{BoxAverage()}}
+{\footnotesize\ttfamily void Box\+Average (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&}]{Rough\+Density,  }\item[{\mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&}]{Density,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Rough\+Wall\+Density,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Wall\+Density,  }\item[{\mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&}]{Filter,  }\item[{int}]{Filter\+Dim,  }\item[{int}]{minx,  }\item[{int}]{maxx,  }\item[{int}]{miny,  }\item[{int}]{maxy,  }\item[{int}]{maxz,  }\item[{int}]{BoxX,  }\item[{int}]{BoxY,  }\item[{int}]{BoxZ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Compute_8h_af39a1f05b3e5ab0988499c3a466995ca}\label{Compute_8h_af39a1f05b3e5ab0988499c3a466995ca}} 
+\index{Compute.h@{Compute.h}!GetDensity@{GetDensity}}
+\index{GetDensity@{GetDensity}!Compute.h@{Compute.h}}
+\doxysubsubsection{\texorpdfstring{GetDensity()}{GetDensity()}}
+{\footnotesize\ttfamily void Get\+Density (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&}]{Density\+Vec,  }\item[{\mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&}]{Density1\+Vec,  }\item[{\mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&}]{Density2\+Vec,  }\item[{\mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&}]{inside\+Colony\+Den,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Height,  }\item[{\mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&}]{Grid,  }\item[{\mbox{\hyperlink{structCell}{Cell}} $\ast$}]{cells,  }\item[{int \&}]{minx,  }\item[{int \&}]{maxx,  }\item[{int \&}]{miny,  }\item[{int \&}]{maxy,  }\item[{int \&}]{maxz }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Compute_8h_a3bd63f555094e655b4f7404a63aac3cc}\label{Compute_8h_a3bd63f555094e655b4f7404a63aac3cc}} 
+\index{Compute.h@{Compute.h}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!Compute.h@{Compute.h}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily void Get\+Height (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&}]{Density\+Vec,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Height,  }\item[{\mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&}]{Grid,  }\item[{\mbox{\hyperlink{structCell}{Cell}} $\ast$}]{cells,  }\item[{int \&}]{minx,  }\item[{int \&}]{maxx,  }\item[{int \&}]{miny,  }\item[{int \&}]{maxy,  }\item[{int \&}]{maxz }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Compute_8h_ae0773142295a09947e259f9c0c517350}\label{Compute_8h_ae0773142295a09947e259f9c0c517350}} 
+\index{Compute.h@{Compute.h}!GetSurfaceNormal@{GetSurfaceNormal}}
+\index{GetSurfaceNormal@{GetSurfaceNormal}!Compute.h@{Compute.h}}
+\doxysubsubsection{\texorpdfstring{GetSurfaceNormal()}{GetSurfaceNormal()}}
+{\footnotesize\ttfamily void Get\+Surface\+Normal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Array_8h_a11597f1ff824ac0aeb5cb4f60f66e366}{Coord\+Array2D}} \&}]{Normal,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Height,  }\item[{int}]{minX,  }\item[{int}]{maxX,  }\item[{int}]{minY,  }\item[{int}]{maxY }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Compute_8h_a809f7acf1e7528c69a10f2d2a43af660}\label{Compute_8h_a809f7acf1e7528c69a10f2d2a43af660}} 
+\index{Compute.h@{Compute.h}!Height\_Average@{Height\_Average}}
+\index{Height\_Average@{Height\_Average}!Compute.h@{Compute.h}}
+\doxysubsubsection{\texorpdfstring{Height\_Average()}{Height\_Average()}}
+{\footnotesize\ttfamily void Height\+\_\+\+Average (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{In\+Height,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Out\+Height,  }\item[{int}]{minx,  }\item[{int}]{maxx,  }\item[{int}]{miny,  }\item[{int}]{maxy }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Compute_8h_a8750b4dff389d67fab66aacf440ee62e}\label{Compute_8h_a8750b4dff389d67fab66aacf440ee62e}} 
+\index{Compute.h@{Compute.h}!mean\_stress@{mean\_stress}}
+\index{mean\_stress@{mean\_stress}!Compute.h@{Compute.h}}
+\doxysubsubsection{\texorpdfstring{mean\_stress()}{mean\_stress()}}
+{\footnotesize\ttfamily void mean\+\_\+stress (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCell}{Cell}} \&}]{cell,  }\item[{const \mbox{\hyperlink{structCell}{Cell}} $\ast$}]{cell\+\_\+array,  }\item[{const int $\ast$}]{neighbours,  }\item[{\mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&}]{Grid,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Wall,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Height,  }\item[{\mbox{\hyperlink{Array_8h_a11597f1ff824ac0aeb5cb4f60f66e366}{Coord\+Array2D}} \&}]{Normal,  }\item[{\mbox{\hyperlink{structTensor}{Tensor}} \&}]{stress\+Tensor,  }\item[{\mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&}]{Fnet }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Compute_8h_ab98b89fc1398f8d8fb23540783dc0fe7}\label{Compute_8h_ab98b89fc1398f8d8fb23540783dc0fe7}} 
+\index{Compute.h@{Compute.h}!ShiftDensity@{ShiftDensity}}
+\index{ShiftDensity@{ShiftDensity}!Compute.h@{Compute.h}}
+\doxysubsubsection{\texorpdfstring{ShiftDensity()}{ShiftDensity()}}
+{\footnotesize\ttfamily void Shift\+Density (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&}]{Density\+Vec,  }\item[{\mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&}]{Density1\+Vec,  }\item[{\mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&}]{Density2\+Vec,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Density\+Wall\+Vec,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Density\+Wall\+Vec1,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Density\+Wall\+Vec2,  }\item[{\mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&}]{Density\+Vec\+ShiftP,  }\item[{\mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&}]{Density1\+Vec\+ShiftP,  }\item[{\mbox{\hyperlink{Array_8h_ab1ddf1d86578ec420d3e9c7b12366b49}{Double\+Array3D}} \&}]{Density2\+Vec\+ShiftP,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Density\+Wall\+Vec\+ShiftP,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Density\+Wall\+Vec1\+ShiftP,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Density\+Wall\+Vec2\+ShiftP,  }\item[{int}]{BoxX,  }\item[{int}]{BoxY,  }\item[{int}]{BoxZ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Compute_8h_aa46893f39241e6610cee1cafde3ac431}\label{Compute_8h_aa46893f39241e6610cee1cafde3ac431}} 
+\index{Compute.h@{Compute.h}!Smooth@{Smooth}}
+\index{Smooth@{Smooth}!Compute.h@{Compute.h}}
+\doxysubsubsection{\texorpdfstring{Smooth()}{Smooth()}}
+{\footnotesize\ttfamily void Smooth (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{In\+Array,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Out\+Array,  }\item[{\mbox{\hyperlink{Array_8h_abcbbe03fd9910a69a4048dc10ab361e3}{Double\+Array2D}} \&}]{Filter,  }\item[{int}]{Filter\+Dim,  }\item[{int}]{minx,  }\item[{int}]{maxx,  }\item[{int}]{miny,  }\item[{int}]{maxy }\end{DoxyParamCaption})}
+

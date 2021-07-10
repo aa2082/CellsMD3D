@@ -1,0 +1,139 @@
+\hypertarget{classUniformGrid}{}\doxysection{Uniform\+Grid Class Reference}
+\label{classUniformGrid}\index{UniformGrid@{UniformGrid}}
+
+
+{\ttfamily \#include $<$Uniform\+Grid.\+h$>$}
+
+
+
+Collaboration diagram for Uniform\+Grid\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classUniformGrid__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structUniformGrid_1_1Address}{Address}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUniformGrid_aafb52ed51365d9ca9d43c448d88fb0d2}{Uniform\+Grid}} (int x\+Size, int y\+Size, int z\+Size, int max\+Cells\+Per\+Box, double \mbox{\hyperlink{Constants_8h_ab11a9bc14b859b15baf5096c2eb3eda1}{Box\+Length}})
+\item 
+int \mbox{\hyperlink{classUniformGrid_a59de6b1e2bb29c1e2044b3219f108ba9}{Max\+Cells\+Per\+Box}} ()
+\item 
+\mbox{\hyperlink{structUniformGrid_1_1Address}{Address}} \mbox{\hyperlink{classUniformGrid_abbfdfb1930b99c127274491af48bcf31}{Get\+Address}} (\mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} position)
+\item 
+\mbox{\hyperlink{tools_8h_ad8fcde08a2bc83ec7847d4c5e1eeed7a}{Int\+Coord}} \mbox{\hyperlink{classUniformGrid_a5f78c627703edd1def536574680da996}{Size}} ()
+\item 
+\mbox{\hyperlink{tools_8h_ad8fcde08a2bc83ec7847d4c5e1eeed7a}{Int\+Coord}} \mbox{\hyperlink{classUniformGrid_a4764e12252b7dfa71da6b984bc6bd4d8}{Get\+XY}} (\mbox{\hyperlink{structUniformGrid_1_1Address}{Address}} address)
+\item 
+\mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \mbox{\hyperlink{classUniformGrid_aeeb5505106f8bbdaec5c3fc2c7683623}{Get\+Centroid}} (\mbox{\hyperlink{tools_8h_ad8fcde08a2bc83ec7847d4c5e1eeed7a}{Int\+Coord}} index)
+\item 
+void \mbox{\hyperlink{classUniformGrid_a12529eb37a0d15ef9f6a2c98f296d8c6}{Add}} (int cell\+ID, const \mbox{\hyperlink{structUniformGrid_1_1Address}{Address}} \&address)
+\item 
+void \mbox{\hyperlink{classUniformGrid_a0d59575eaeaeb364446a9d0a3a752529}{Remove}} (int cell\+ID, const \mbox{\hyperlink{structUniformGrid_1_1Address}{Address}} \&address)
+\item 
+void \mbox{\hyperlink{classUniformGrid_aa7087bc59af0bf07e72d194a494d0afd}{Move}} (int cell\+ID, const \mbox{\hyperlink{structUniformGrid_1_1Address}{Address}} \&old\+Address, const \mbox{\hyperlink{structUniformGrid_1_1Address}{Address}} \&new\+Address)
+\item 
+int \mbox{\hyperlink{classUniformGrid_ad0f0a289ab038fb7a69e44939d7d34eb}{Get\+Neighbours}} (int cell\+ID, const \mbox{\hyperlink{structUniformGrid_1_1Address}{Address}} \&address, int $\ast$neighbours, int max\+Neighbours)
+\item 
+int \mbox{\hyperlink{classUniformGrid_a27f8f5c9a791279f4197b4d16506f703}{Get\+Cells}} (int x\+\_\+index, int y\+\_\+index, int z\+\_\+index, int $\ast$\&cells)
+\item 
+int \mbox{\hyperlink{classUniformGrid_ad1ed48d7c881c57c63d1780a3edb02f6}{Get\+Number}} (int x\+\_\+index, int y\+\_\+index, int z\+\_\+index)
+\item 
+\mbox{\hyperlink{classUniformGrid_a23d9d6220948afe4fd299ba9ce43bd9e}{$\sim$\+Uniform\+Grid}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUniformGrid_aafb52ed51365d9ca9d43c448d88fb0d2}\label{classUniformGrid_aafb52ed51365d9ca9d43c448d88fb0d2}} 
+\index{UniformGrid@{UniformGrid}!UniformGrid@{UniformGrid}}
+\index{UniformGrid@{UniformGrid}!UniformGrid@{UniformGrid}}
+\doxysubsubsection{\texorpdfstring{UniformGrid()}{UniformGrid()}}
+{\footnotesize\ttfamily Uniform\+Grid\+::\+Uniform\+Grid (\begin{DoxyParamCaption}\item[{int}]{x\+Size,  }\item[{int}]{y\+Size,  }\item[{int}]{z\+Size,  }\item[{int}]{max\+Cells\+Per\+Box,  }\item[{double}]{Box\+Length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classUniformGrid_a23d9d6220948afe4fd299ba9ce43bd9e}\label{classUniformGrid_a23d9d6220948afe4fd299ba9ce43bd9e}} 
+\index{UniformGrid@{UniformGrid}!````~UniformGrid@{$\sim$UniformGrid}}
+\index{````~UniformGrid@{$\sim$UniformGrid}!UniformGrid@{UniformGrid}}
+\doxysubsubsection{\texorpdfstring{$\sim$UniformGrid()}{~UniformGrid()}}
+{\footnotesize\ttfamily Uniform\+Grid\+::$\sim$\+Uniform\+Grid (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniformGrid_a12529eb37a0d15ef9f6a2c98f296d8c6}\label{classUniformGrid_a12529eb37a0d15ef9f6a2c98f296d8c6}} 
+\index{UniformGrid@{UniformGrid}!Add@{Add}}
+\index{Add@{Add}!UniformGrid@{UniformGrid}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void Uniform\+Grid\+::\+Add (\begin{DoxyParamCaption}\item[{int}]{cell\+ID,  }\item[{const \mbox{\hyperlink{structUniformGrid_1_1Address}{Address}} \&}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classUniformGrid_abbfdfb1930b99c127274491af48bcf31}\label{classUniformGrid_abbfdfb1930b99c127274491af48bcf31}} 
+\index{UniformGrid@{UniformGrid}!GetAddress@{GetAddress}}
+\index{GetAddress@{GetAddress}!UniformGrid@{UniformGrid}}
+\doxysubsubsection{\texorpdfstring{GetAddress()}{GetAddress()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structUniformGrid_1_1Address}{Address}} Uniform\+Grid\+::\+Get\+Address (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classUniformGrid_a27f8f5c9a791279f4197b4d16506f703}\label{classUniformGrid_a27f8f5c9a791279f4197b4d16506f703}} 
+\index{UniformGrid@{UniformGrid}!GetCells@{GetCells}}
+\index{GetCells@{GetCells}!UniformGrid@{UniformGrid}}
+\doxysubsubsection{\texorpdfstring{GetCells()}{GetCells()}}
+{\footnotesize\ttfamily int Uniform\+Grid\+::\+Get\+Cells (\begin{DoxyParamCaption}\item[{int}]{x\+\_\+index,  }\item[{int}]{y\+\_\+index,  }\item[{int}]{z\+\_\+index,  }\item[{int $\ast$\&}]{cells }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classUniformGrid_aeeb5505106f8bbdaec5c3fc2c7683623}\label{classUniformGrid_aeeb5505106f8bbdaec5c3fc2c7683623}} 
+\index{UniformGrid@{UniformGrid}!GetCentroid@{GetCentroid}}
+\index{GetCentroid@{GetCentroid}!UniformGrid@{UniformGrid}}
+\doxysubsubsection{\texorpdfstring{GetCentroid()}{GetCentroid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} Uniform\+Grid\+::\+Get\+Centroid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{tools_8h_ad8fcde08a2bc83ec7847d4c5e1eeed7a}{Int\+Coord}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classUniformGrid_ad0f0a289ab038fb7a69e44939d7d34eb}\label{classUniformGrid_ad0f0a289ab038fb7a69e44939d7d34eb}} 
+\index{UniformGrid@{UniformGrid}!GetNeighbours@{GetNeighbours}}
+\index{GetNeighbours@{GetNeighbours}!UniformGrid@{UniformGrid}}
+\doxysubsubsection{\texorpdfstring{GetNeighbours()}{GetNeighbours()}}
+{\footnotesize\ttfamily int Uniform\+Grid\+::\+Get\+Neighbours (\begin{DoxyParamCaption}\item[{int}]{cell\+ID,  }\item[{const \mbox{\hyperlink{structUniformGrid_1_1Address}{Address}} \&}]{address,  }\item[{int $\ast$}]{neighbours,  }\item[{int}]{max\+Neighbours }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classUniformGrid_ad1ed48d7c881c57c63d1780a3edb02f6}\label{classUniformGrid_ad1ed48d7c881c57c63d1780a3edb02f6}} 
+\index{UniformGrid@{UniformGrid}!GetNumber@{GetNumber}}
+\index{GetNumber@{GetNumber}!UniformGrid@{UniformGrid}}
+\doxysubsubsection{\texorpdfstring{GetNumber()}{GetNumber()}}
+{\footnotesize\ttfamily int Uniform\+Grid\+::\+Get\+Number (\begin{DoxyParamCaption}\item[{int}]{x\+\_\+index,  }\item[{int}]{y\+\_\+index,  }\item[{int}]{z\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classUniformGrid_a4764e12252b7dfa71da6b984bc6bd4d8}\label{classUniformGrid_a4764e12252b7dfa71da6b984bc6bd4d8}} 
+\index{UniformGrid@{UniformGrid}!GetXY@{GetXY}}
+\index{GetXY@{GetXY}!UniformGrid@{UniformGrid}}
+\doxysubsubsection{\texorpdfstring{GetXY()}{GetXY()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tools_8h_ad8fcde08a2bc83ec7847d4c5e1eeed7a}{Int\+Coord}} Uniform\+Grid\+::\+Get\+XY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structUniformGrid_1_1Address}{Address}}}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classUniformGrid_a59de6b1e2bb29c1e2044b3219f108ba9}\label{classUniformGrid_a59de6b1e2bb29c1e2044b3219f108ba9}} 
+\index{UniformGrid@{UniformGrid}!MaxCellsPerBox@{MaxCellsPerBox}}
+\index{MaxCellsPerBox@{MaxCellsPerBox}!UniformGrid@{UniformGrid}}
+\doxysubsubsection{\texorpdfstring{MaxCellsPerBox()}{MaxCellsPerBox()}}
+{\footnotesize\ttfamily int Uniform\+Grid\+::\+Max\+Cells\+Per\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classUniformGrid_aa7087bc59af0bf07e72d194a494d0afd}\label{classUniformGrid_aa7087bc59af0bf07e72d194a494d0afd}} 
+\index{UniformGrid@{UniformGrid}!Move@{Move}}
+\index{Move@{Move}!UniformGrid@{UniformGrid}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void Uniform\+Grid\+::\+Move (\begin{DoxyParamCaption}\item[{int}]{cell\+ID,  }\item[{const \mbox{\hyperlink{structUniformGrid_1_1Address}{Address}} \&}]{old\+Address,  }\item[{const \mbox{\hyperlink{structUniformGrid_1_1Address}{Address}} \&}]{new\+Address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classUniformGrid_a0d59575eaeaeb364446a9d0a3a752529}\label{classUniformGrid_a0d59575eaeaeb364446a9d0a3a752529}} 
+\index{UniformGrid@{UniformGrid}!Remove@{Remove}}
+\index{Remove@{Remove}!UniformGrid@{UniformGrid}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily void Uniform\+Grid\+::\+Remove (\begin{DoxyParamCaption}\item[{int}]{cell\+ID,  }\item[{const \mbox{\hyperlink{structUniformGrid_1_1Address}{Address}} \&}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classUniformGrid_a5f78c627703edd1def536574680da996}\label{classUniformGrid_a5f78c627703edd1def536574680da996}} 
+\index{UniformGrid@{UniformGrid}!Size@{Size}}
+\index{Size@{Size}!UniformGrid@{UniformGrid}}
+\doxysubsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tools_8h_ad8fcde08a2bc83ec7847d4c5e1eeed7a}{Int\+Coord}} Uniform\+Grid\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{UniformGrid_8h}{Uniform\+Grid.\+h}}\end{DoxyCompactItemize}

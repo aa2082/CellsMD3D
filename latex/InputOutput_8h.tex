@@ -1,0 +1,130 @@
+\hypertarget{InputOutput_8h}{}\doxysection{Input\+Output.\+h File Reference}
+\label{InputOutput_8h}\index{InputOutput.h@{InputOutput.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Uniform\+Grid.\+h\char`\"{}}\newline
+Include dependency graph for Input\+Output.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{InputOutput_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{InputOutput_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structOutputFiles}{Output\+Files}}
+\item 
+struct \mbox{\hyperlink{structInputs}{Inputs}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{InputOutput_8h_a4f5bed1e1d585ea747803b51084af0ae}{Create\+Output\+File\+Lineage}} (int Output\+ID, \mbox{\hyperlink{structOutputFiles}{Output\+Files}} \&Files, bool append)
+\item 
+void \mbox{\hyperlink{InputOutput_8h_ae1f9037e7bf3b75e9cb56e934ecb4f60}{Close\+Output\+File\+Lineage}} (\mbox{\hyperlink{structOutputFiles}{Output\+Files}} \&Files)
+\item 
+void \mbox{\hyperlink{InputOutput_8h_a35f23e044666c5dd63b5491c146b5343}{Create\+Output\+Files}} (int Output\+ID, \mbox{\hyperlink{structOutputFiles}{Output\+Files}} \&Files, bool append)
+\item 
+void \mbox{\hyperlink{InputOutput_8h_a40f5ffc3a39050729c39573b5f8f47d1}{Close\+Output\+Files}} (\mbox{\hyperlink{structOutputFiles}{Output\+Files}} \&Files)
+\item 
+int \mbox{\hyperlink{InputOutput_8h_a3219af442bc820e0c3340ae41eb2d106}{Add\+First\+Cells}} (\mbox{\hyperlink{structCell}{Cell}} $\ast$cells, double \mbox{\hyperlink{Constants_8h_af43b8b664293a68a23ecd3fd9430b90d}{L\+\_\+divide}}, double radius, \mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&Grid, \mbox{\hyperlink{structInputs}{Inputs}} \&Ini)
+\item 
+int \mbox{\hyperlink{InputOutput_8h_a0f722ac091b4ce67ecc06083958f46cf}{Load\+Cells}} (char $\ast$fname, \mbox{\hyperlink{structCell}{Cell}} $\ast$cells, \mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&Grid, double \&t, double \&dt)
+\item 
+void \mbox{\hyperlink{InputOutput_8h_aae29eca21b570df289582ec92a0438b9}{Save\+Cells}} (FILE $\ast$FID, \mbox{\hyperlink{structCell}{Cell}} $\ast$cells, int N\+\_\+cells, double t, double dt)
+\item 
+\mbox{\hyperlink{structInputs}{Inputs}} \mbox{\hyperlink{InputOutput_8h_a855f5fd935f3208cf1ba301bf8196de6}{Read\+Parameters}} (char $\ast$fname)
+\item 
+int \mbox{\hyperlink{InputOutput_8h_a153acf9a75d32608d4bc513c8fc3b427}{Get\+File\+Len}} (FILE $\ast$my\+File)
+\item 
+char $\ast$ \mbox{\hyperlink{InputOutput_8h_a3c2a0c74eb72b3b1a21ed167fff1af92}{Get\+Next\+String}} (char $\ast$\&buffer)
+\item 
+void \mbox{\hyperlink{InputOutput_8h_ae2cd72c70bfaeee08e5aa9379e85710e}{Output}} (FILE $\ast$FID, int ID, double t, const \mbox{\hyperlink{structCell}{Cell}} \&cell, const \mbox{\hyperlink{structTensor}{Tensor}} T)
+\item 
+void \mbox{\hyperlink{InputOutput_8h_a0b1153ceda28b47a73840974cf1d77d1}{Output}} (FILE $\ast$FID, int ID, double t, const \mbox{\hyperlink{structCell}{Cell}} \&cell, const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} F)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{InputOutput_8h_a3219af442bc820e0c3340ae41eb2d106}\label{InputOutput_8h_a3219af442bc820e0c3340ae41eb2d106}} 
+\index{InputOutput.h@{InputOutput.h}!AddFirstCells@{AddFirstCells}}
+\index{AddFirstCells@{AddFirstCells}!InputOutput.h@{InputOutput.h}}
+\doxysubsubsection{\texorpdfstring{AddFirstCells()}{AddFirstCells()}}
+{\footnotesize\ttfamily int Add\+First\+Cells (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCell}{Cell}} $\ast$}]{cells,  }\item[{double}]{L\+\_\+divide,  }\item[{double}]{radius,  }\item[{\mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&}]{Grid,  }\item[{\mbox{\hyperlink{structInputs}{Inputs}} \&}]{Ini }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{InputOutput_8h_ae1f9037e7bf3b75e9cb56e934ecb4f60}\label{InputOutput_8h_ae1f9037e7bf3b75e9cb56e934ecb4f60}} 
+\index{InputOutput.h@{InputOutput.h}!CloseOutputFileLineage@{CloseOutputFileLineage}}
+\index{CloseOutputFileLineage@{CloseOutputFileLineage}!InputOutput.h@{InputOutput.h}}
+\doxysubsubsection{\texorpdfstring{CloseOutputFileLineage()}{CloseOutputFileLineage()}}
+{\footnotesize\ttfamily void Close\+Output\+File\+Lineage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structOutputFiles}{Output\+Files}} \&}]{Files }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{InputOutput_8h_a40f5ffc3a39050729c39573b5f8f47d1}\label{InputOutput_8h_a40f5ffc3a39050729c39573b5f8f47d1}} 
+\index{InputOutput.h@{InputOutput.h}!CloseOutputFiles@{CloseOutputFiles}}
+\index{CloseOutputFiles@{CloseOutputFiles}!InputOutput.h@{InputOutput.h}}
+\doxysubsubsection{\texorpdfstring{CloseOutputFiles()}{CloseOutputFiles()}}
+{\footnotesize\ttfamily void Close\+Output\+Files (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structOutputFiles}{Output\+Files}} \&}]{Files }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{InputOutput_8h_a4f5bed1e1d585ea747803b51084af0ae}\label{InputOutput_8h_a4f5bed1e1d585ea747803b51084af0ae}} 
+\index{InputOutput.h@{InputOutput.h}!CreateOutputFileLineage@{CreateOutputFileLineage}}
+\index{CreateOutputFileLineage@{CreateOutputFileLineage}!InputOutput.h@{InputOutput.h}}
+\doxysubsubsection{\texorpdfstring{CreateOutputFileLineage()}{CreateOutputFileLineage()}}
+{\footnotesize\ttfamily void Create\+Output\+File\+Lineage (\begin{DoxyParamCaption}\item[{int}]{Output\+ID,  }\item[{\mbox{\hyperlink{structOutputFiles}{Output\+Files}} \&}]{Files,  }\item[{bool}]{append }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{InputOutput_8h_a35f23e044666c5dd63b5491c146b5343}\label{InputOutput_8h_a35f23e044666c5dd63b5491c146b5343}} 
+\index{InputOutput.h@{InputOutput.h}!CreateOutputFiles@{CreateOutputFiles}}
+\index{CreateOutputFiles@{CreateOutputFiles}!InputOutput.h@{InputOutput.h}}
+\doxysubsubsection{\texorpdfstring{CreateOutputFiles()}{CreateOutputFiles()}}
+{\footnotesize\ttfamily void Create\+Output\+Files (\begin{DoxyParamCaption}\item[{int}]{Output\+ID,  }\item[{\mbox{\hyperlink{structOutputFiles}{Output\+Files}} \&}]{Files,  }\item[{bool}]{append }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{InputOutput_8h_a153acf9a75d32608d4bc513c8fc3b427}\label{InputOutput_8h_a153acf9a75d32608d4bc513c8fc3b427}} 
+\index{InputOutput.h@{InputOutput.h}!GetFileLen@{GetFileLen}}
+\index{GetFileLen@{GetFileLen}!InputOutput.h@{InputOutput.h}}
+\doxysubsubsection{\texorpdfstring{GetFileLen()}{GetFileLen()}}
+{\footnotesize\ttfamily int Get\+File\+Len (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{my\+File }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{InputOutput_8h_a3c2a0c74eb72b3b1a21ed167fff1af92}\label{InputOutput_8h_a3c2a0c74eb72b3b1a21ed167fff1af92}} 
+\index{InputOutput.h@{InputOutput.h}!GetNextString@{GetNextString}}
+\index{GetNextString@{GetNextString}!InputOutput.h@{InputOutput.h}}
+\doxysubsubsection{\texorpdfstring{GetNextString()}{GetNextString()}}
+{\footnotesize\ttfamily char$\ast$ Get\+Next\+String (\begin{DoxyParamCaption}\item[{char $\ast$\&}]{buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{InputOutput_8h_a0f722ac091b4ce67ecc06083958f46cf}\label{InputOutput_8h_a0f722ac091b4ce67ecc06083958f46cf}} 
+\index{InputOutput.h@{InputOutput.h}!LoadCells@{LoadCells}}
+\index{LoadCells@{LoadCells}!InputOutput.h@{InputOutput.h}}
+\doxysubsubsection{\texorpdfstring{LoadCells()}{LoadCells()}}
+{\footnotesize\ttfamily int Load\+Cells (\begin{DoxyParamCaption}\item[{char $\ast$}]{fname,  }\item[{\mbox{\hyperlink{structCell}{Cell}} $\ast$}]{cells,  }\item[{\mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&}]{Grid,  }\item[{double \&}]{t,  }\item[{double \&}]{dt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{InputOutput_8h_a0b1153ceda28b47a73840974cf1d77d1}\label{InputOutput_8h_a0b1153ceda28b47a73840974cf1d77d1}} 
+\index{InputOutput.h@{InputOutput.h}!Output@{Output}}
+\index{Output@{Output}!InputOutput.h@{InputOutput.h}}
+\doxysubsubsection{\texorpdfstring{Output()}{Output()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Output (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{FID,  }\item[{int}]{ID,  }\item[{double}]{t,  }\item[{const \mbox{\hyperlink{structCell}{Cell}} \&}]{cell,  }\item[{const \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}}}]{F }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{InputOutput_8h_ae2cd72c70bfaeee08e5aa9379e85710e}\label{InputOutput_8h_ae2cd72c70bfaeee08e5aa9379e85710e}} 
+\index{InputOutput.h@{InputOutput.h}!Output@{Output}}
+\index{Output@{Output}!InputOutput.h@{InputOutput.h}}
+\doxysubsubsection{\texorpdfstring{Output()}{Output()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Output (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{FID,  }\item[{int}]{ID,  }\item[{double}]{t,  }\item[{const \mbox{\hyperlink{structCell}{Cell}} \&}]{cell,  }\item[{const \mbox{\hyperlink{structTensor}{Tensor}}}]{T }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{InputOutput_8h_a855f5fd935f3208cf1ba301bf8196de6}\label{InputOutput_8h_a855f5fd935f3208cf1ba301bf8196de6}} 
+\index{InputOutput.h@{InputOutput.h}!ReadParameters@{ReadParameters}}
+\index{ReadParameters@{ReadParameters}!InputOutput.h@{InputOutput.h}}
+\doxysubsubsection{\texorpdfstring{ReadParameters()}{ReadParameters()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structInputs}{Inputs}} Read\+Parameters (\begin{DoxyParamCaption}\item[{char $\ast$}]{fname }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{InputOutput_8h_aae29eca21b570df289582ec92a0438b9}\label{InputOutput_8h_aae29eca21b570df289582ec92a0438b9}} 
+\index{InputOutput.h@{InputOutput.h}!SaveCells@{SaveCells}}
+\index{SaveCells@{SaveCells}!InputOutput.h@{InputOutput.h}}
+\doxysubsubsection{\texorpdfstring{SaveCells()}{SaveCells()}}
+{\footnotesize\ttfamily void Save\+Cells (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{FID,  }\item[{\mbox{\hyperlink{structCell}{Cell}} $\ast$}]{cells,  }\item[{int}]{N\+\_\+cells,  }\item[{double}]{t,  }\item[{double}]{dt }\end{DoxyParamCaption})}
+

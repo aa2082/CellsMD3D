@@ -1,0 +1,71 @@
+\hypertarget{Neighbours_8cpp}{}\doxysection{Neighbours.\+cpp File Reference}
+\label{Neighbours_8cpp}\index{Neighbours.cpp@{Neighbours.cpp}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Neighbours.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Cell.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Constants.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Uniform\+Grid.\+h\char`\"{}}\newline
+Include dependency graph for Neighbours.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Neighbours_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$$\ast$ \mbox{\hyperlink{Neighbours_8cpp_a847e67ec01e9228d5d0ef2ed809bd0c4}{Initialize\+Neighbour\+List}} (int \mbox{\hyperlink{Constants_8h_a7ba33cd4629c132270780fc5a57cc507}{max\+Cells}}, int max\+Neighbours)
+\item 
+void \mbox{\hyperlink{Neighbours_8cpp_ae3cde3ddc368669e54d47091710d23c6}{get\+Neighbours}} (const \mbox{\hyperlink{structCell}{Cell}} $\ast$cell\+\_\+array, int N\+\_\+cells, \mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&Grid, int $\ast$$\ast$Neighbour\+List, int max\+Neighbours)
+\item 
+void \mbox{\hyperlink{Neighbours_8cpp_a8ca07336dabee316c9d995da9fb5477e}{get\+Neighbours}} (const \mbox{\hyperlink{structCell}{Cell}} $\ast$cell\+\_\+array, \mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&Grid, int $\ast$$\ast$Neighbour\+List, int max\+Neighbours, int $\ast$ID, int ID\+\_\+length)
+\item 
+int \mbox{\hyperlink{Neighbours_8cpp_a9d318ad13c488d6bf7aa22fabf76ceae}{reduce\+Neighbours}} (const \mbox{\hyperlink{structCell}{Cell}} \&cell, const \mbox{\hyperlink{structCell}{Cell}} $\ast$cell\+\_\+array, int $\ast$neighbours)
+\item 
+double \mbox{\hyperlink{Neighbours_8cpp_a217112e0837270a8a39f8f42dff58879}{clamp}} (double n, double minn, double maxn)
+\item 
+void \mbox{\hyperlink{Neighbours_8cpp_abaa3b0fe31bac6b8fcc5fc08617d4f45}{min\+\_\+distance}} (const \mbox{\hyperlink{structCell}{Cell}} \&cell1, const \mbox{\hyperlink{structCell}{Cell}} \&cell2, double \&d, \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&c1, \mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&c2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Neighbours_8cpp_a217112e0837270a8a39f8f42dff58879}\label{Neighbours_8cpp_a217112e0837270a8a39f8f42dff58879}} 
+\index{Neighbours.cpp@{Neighbours.cpp}!clamp@{clamp}}
+\index{clamp@{clamp}!Neighbours.cpp@{Neighbours.cpp}}
+\doxysubsubsection{\texorpdfstring{clamp()}{clamp()}}
+{\footnotesize\ttfamily double clamp (\begin{DoxyParamCaption}\item[{double}]{n,  }\item[{double}]{minn,  }\item[{double}]{maxn }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Neighbours_8cpp_ae3cde3ddc368669e54d47091710d23c6}\label{Neighbours_8cpp_ae3cde3ddc368669e54d47091710d23c6}} 
+\index{Neighbours.cpp@{Neighbours.cpp}!getNeighbours@{getNeighbours}}
+\index{getNeighbours@{getNeighbours}!Neighbours.cpp@{Neighbours.cpp}}
+\doxysubsubsection{\texorpdfstring{getNeighbours()}{getNeighbours()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void get\+Neighbours (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCell}{Cell}} $\ast$}]{cell\+\_\+array,  }\item[{int}]{N\+\_\+cells,  }\item[{\mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&}]{Grid,  }\item[{int $\ast$$\ast$}]{Neighbour\+List,  }\item[{int}]{max\+Neighbours }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Neighbours_8cpp_a8ca07336dabee316c9d995da9fb5477e}\label{Neighbours_8cpp_a8ca07336dabee316c9d995da9fb5477e}} 
+\index{Neighbours.cpp@{Neighbours.cpp}!getNeighbours@{getNeighbours}}
+\index{getNeighbours@{getNeighbours}!Neighbours.cpp@{Neighbours.cpp}}
+\doxysubsubsection{\texorpdfstring{getNeighbours()}{getNeighbours()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void get\+Neighbours (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCell}{Cell}} $\ast$}]{cell\+\_\+array,  }\item[{\mbox{\hyperlink{classUniformGrid}{Uniform\+Grid}} \&}]{Grid,  }\item[{int $\ast$$\ast$}]{Neighbour\+List,  }\item[{int}]{max\+Neighbours,  }\item[{int $\ast$}]{ID,  }\item[{int}]{ID\+\_\+length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Neighbours_8cpp_a847e67ec01e9228d5d0ef2ed809bd0c4}\label{Neighbours_8cpp_a847e67ec01e9228d5d0ef2ed809bd0c4}} 
+\index{Neighbours.cpp@{Neighbours.cpp}!InitializeNeighbourList@{InitializeNeighbourList}}
+\index{InitializeNeighbourList@{InitializeNeighbourList}!Neighbours.cpp@{Neighbours.cpp}}
+\doxysubsubsection{\texorpdfstring{InitializeNeighbourList()}{InitializeNeighbourList()}}
+{\footnotesize\ttfamily int$\ast$$\ast$ Initialize\+Neighbour\+List (\begin{DoxyParamCaption}\item[{int}]{max\+Cells,  }\item[{int}]{max\+Neighbours }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Neighbours_8cpp_abaa3b0fe31bac6b8fcc5fc08617d4f45}\label{Neighbours_8cpp_abaa3b0fe31bac6b8fcc5fc08617d4f45}} 
+\index{Neighbours.cpp@{Neighbours.cpp}!min\_distance@{min\_distance}}
+\index{min\_distance@{min\_distance}!Neighbours.cpp@{Neighbours.cpp}}
+\doxysubsubsection{\texorpdfstring{min\_distance()}{min\_distance()}}
+{\footnotesize\ttfamily void min\+\_\+distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCell}{Cell}} \&}]{cell1,  }\item[{const \mbox{\hyperlink{structCell}{Cell}} \&}]{cell2,  }\item[{double \&}]{d,  }\item[{\mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&}]{c1,  }\item[{\mbox{\hyperlink{tools_8h_a29e60955909f646c4eb5e64139f3195d}{Double\+Coord}} \&}]{c2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Neighbours_8cpp_a9d318ad13c488d6bf7aa22fabf76ceae}\label{Neighbours_8cpp_a9d318ad13c488d6bf7aa22fabf76ceae}} 
+\index{Neighbours.cpp@{Neighbours.cpp}!reduceNeighbours@{reduceNeighbours}}
+\index{reduceNeighbours@{reduceNeighbours}!Neighbours.cpp@{Neighbours.cpp}}
+\doxysubsubsection{\texorpdfstring{reduceNeighbours()}{reduceNeighbours()}}
+{\footnotesize\ttfamily int reduce\+Neighbours (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCell}{Cell}} \&}]{cell,  }\item[{const \mbox{\hyperlink{structCell}{Cell}} $\ast$}]{cell\+\_\+array,  }\item[{int $\ast$}]{neighbours }\end{DoxyParamCaption})}
+

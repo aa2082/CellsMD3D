@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['boxaverage_17',['BoxAverage',['../Compute_8cpp.html#a1b84c77ee68601e28bffeaa9a55f50f0',1,'BoxAverage(DoubleArray3D &amp;RoughDensity, DoubleArray3D &amp;Density, DoubleArray2D &amp;RoughWallDensity, DoubleArray2D &amp;WallDensity, DoubleArray3D &amp;Filter, int FilterDim, int minx, int maxx, int miny, int maxy, int maxz, int BoxX, int BoxY, int BoxZ):&#160;Compute.cpp'],['../Compute_8h.html#a1b84c77ee68601e28bffeaa9a55f50f0',1,'BoxAverage(DoubleArray3D &amp;RoughDensity, DoubleArray3D &amp;Density, DoubleArray2D &amp;RoughWallDensity, DoubleArray2D &amp;WallDensity, DoubleArray3D &amp;Filter, int FilterDim, int minx, int maxx, int miny, int maxy, int maxz, int BoxX, int BoxY, int BoxZ):&#160;Compute.cpp']]],
+  ['boxlength_18',['BoxLength',['../Constants_8cpp.html#ab11a9bc14b859b15baf5096c2eb3eda1',1,'BoxLength():&#160;Constants.cpp'],['../Constants_8h.html#ab11a9bc14b859b15baf5096c2eb3eda1',1,'BoxLength():&#160;Constants.cpp']]],
+  ['boxx_19',['BoxX',['../Constants_8cpp.html#a8b7b59e20c0994e1c1309268294eb4cb',1,'BoxX():&#160;Constants.cpp'],['../Constants_8h.html#a8b7b59e20c0994e1c1309268294eb4cb',1,'BoxX():&#160;Constants.cpp']]],
+  ['boxy_20',['BoxY',['../Constants_8cpp.html#aa9183cfb267446f291f5b88ea4aac9d7',1,'BoxY():&#160;Constants.cpp'],['../Constants_8h.html#aa9183cfb267446f291f5b88ea4aac9d7',1,'BoxY():&#160;Constants.cpp']]],
+  ['boxz_21',['BoxZ',['../Constants_8cpp.html#a1cffa0eef31b31f1a6e34c0655ebd118',1,'BoxZ():&#160;Constants.cpp'],['../Constants_8h.html#a1cffa0eef31b31f1a6e34c0655ebd118',1,'BoxZ():&#160;Constants.cpp']]],
+  ['boxzagar_22',['BoxZAgar',['../Constants_8cpp.html#a5ec0871dd26ac980a5b1c12617c3ed84',1,'BoxZAgar():&#160;Constants.cpp'],['../Constants_8h.html#a5ec0871dd26ac980a5b1c12617c3ed84',1,'BoxZAgar():&#160;Constants.cpp']]]
+];
