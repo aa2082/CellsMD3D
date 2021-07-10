@@ -7,7 +7,7 @@ cd run_sim
 g++ ../*.cpp -fopenmp -O3
 ```
 ### run the code
-`./a.out in1.txt 2 /Direcotry/To/Output/Folder > /Redirect/Console/Output &`\
+`./a.out in1.txt 2 /Direcotry/To/Output/Folder > /Redirect/Console/Output &`
 
 list of arguments:
 
