@@ -3,6 +3,7 @@
 ---
 
 how to compile and run the cpp code?
+
 (1) compile the code:
 ```
 cd run_sim 
@@ -12,8 +13,11 @@ g++ ../*.cpp -fopenmp -O3
 run the code: 
 `./a.out in1.txt 2 /Direcotry/To/Output/Folder > /Redirect/Console/Output &`
 The command line argument in1.txt is the input txt file. 
+
 The command line argument 2 means we run this code using 2 cores. You can change it to some other numbers. 
+
 The command line argument `/Direcotry/To/Output/Folder` is the directory to output the data. 
+
 The command line argument `> /Redirect/Console/Output &` means console outpout gets redirected to `/Redirect/Console/Output`, and the program runs in background.
 
 ---
