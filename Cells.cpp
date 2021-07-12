@@ -91,8 +91,8 @@ void DivideCell(int parentID, int daughterID, Cell* cells, UniformGrid& Grid, co
 	// divide and create a new cell with ID N_cells
 	divide(parentCell, daughterCell, t);
 
-	parentCell.InitialVolume = (parentCell.Radius*parentCell.Radius)*PI*(parentCell.Length + 4.0/3.0*PI*parentCell.Radius);
-	daughterCell.InitialVolume = (daughterCell.Radius*daughterCell.Radius)*PI*(daughterCell.Length + 4.0/3.0*PI*daughterCell.Radius);
+	parentCell.InitialVolume = (PI*parentCell.Radius*parentCell.Radius)*PI*(parentCell.Length + (4.0/3.0)*parentCell.Radius);
+	daughterCell.InitialVolume = (PI*daughterCell.Radius*daughterCell.Radius)*PI*(daughterCell.Length + (4.0/3.0)*daughterCell.Radius);
 
 	// add mother and daughter to grid
 	Grid.Add(parentID, Grid.GetAddress(average(parentCell.Position)));

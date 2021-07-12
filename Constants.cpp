@@ -63,4 +63,4 @@ bool NutrientGSI = 0;
 int refinementGridHeight = 4;
 
 //growth growth mode
-int growthProfile = 0;
+int GrowthProfile = 0;
