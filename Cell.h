@@ -33,7 +33,7 @@ struct Cell
 	//int growth_mode;	//defines whether cell is either ADDER, SIZER, TIMER
 	int p_age = 0;		//p pole age
 	int q_age = 0; 		//p pole age
-	double InitialVolume;
+	double InitialLength;
 	double Volume; 		//volume of cell
 	double Age = 0.0;				//time since cell birth
 };

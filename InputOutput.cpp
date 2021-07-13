@@ -478,8 +478,8 @@ Inputs ReadParameters(char* fname)
 			cellRadius = atof(var_value);
 		else if (strcmp(var_name,"L_divide")==0)
 			L_divide = atof(var_value);
-	    else if (strcmp(var_name,"V_divide")==0)
-				V_divide = atof(var_value);
+	    else if (strcmp(var_name,"Adder_L_divide")==0)
+				Adder_L_divide = atof(var_value);
 	    else if (strcmp(var_name,"T_divide")==0)
 			T_divide = atof(var_value);
 		else if (strcmp(var_name,"k_cc")==0)
