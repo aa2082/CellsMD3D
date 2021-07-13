@@ -61,7 +61,7 @@ void grow(double dt, Cell& cell, EnvArray3D& Env, AgaArray2D** Wal, UniformGrid&
 
 	cell.Length += dL; // increase the length of the cell
 	cell.Age += dt;
-	cell.Volume = cell.Length*PI*cell.Radius*cell.Radius + 4.0/3.0*PI*cell.Radius*cell.Radius*cell.Radius;
+	cell.Volume = (PI*cell.Radius*cell.Radius)*(cell.Length + (4.0/3.0)*cell.Radius);
 	
 	cell.Position.p = diff(cell.Position.p,dv);
 	cell.Position.q = sum(cell.Position.q,dv);
