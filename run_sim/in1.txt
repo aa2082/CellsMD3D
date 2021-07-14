@@ -2,8 +2,8 @@ Radius		0.5
 L_divide	3.0
 k_cc		200000.0
 k_wc		200000.0
-var_L		0.25
-var_angle	0.001
+var_L		0.0
+var_angle	0.0
 var_pos		0.0
 
 Wall_Mu		0.8
