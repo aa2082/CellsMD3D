@@ -8,6 +8,8 @@
 #include "UniformGrid.h"
 #include "Cell.h"
 #include <omp.h>
+#include <iostream>
+#include <fstream>
 
 
 // Main function to move cell
@@ -71,9 +73,14 @@ void DivideCell(int parentID, int daughterID, Cell* cells, UniformGrid& Grid, co
 	
 	// remove the ID from the grid
 	Grid.Remove(parentID, oldAddress);
-
+	std::ofstream lbld;
+	lbld.open("lbld.txt", std::fstream::out | std::fstream::app);
+	lbld << t << ",\t" << parentID << ",\tld,\t" << parentCell.Length << "\n";
 	// divide and create a new cell with ID N_cells
 	divide(parentCell, daughterCell, t);
+	lbld << t << ",\t" << parentID << ",\tlb,\t" << parentCell.Length << "\n";
+	lbld << t << ",\t" << daughterID << ",\tlb,\t" << daughterCell.Length << "\n";
+	lbld.close();
 
 	// add mother and daughter to grid
 	Grid.Add(parentID, Grid.GetAddress(average(parentCell.Position)));
