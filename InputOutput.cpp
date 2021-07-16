@@ -316,6 +316,7 @@ int AddFirstCells(Cell* cells, double L_divide, double radius, UniformGrid& Grid
 			while (CheckOverlap==true)
 			{
 				cells[icell].Length = L;
+				cells[icell].InitialLength = L;
 				cells[icell].Radius = radius;
 				radiusPos = (float)rand()/RAND_MAX*Ini.ColonyRadius;
 				thetaPos = 2.0*PI*((float)rand()/RAND_MAX);

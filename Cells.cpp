@@ -101,6 +101,10 @@ void DivideCell(int parentID, int daughterID, Cell* cells, UniformGrid& Grid, co
 	parentCell.InitialLength = parentCell.Length;
 	daughterCell.InitialLength = daughterCell.Length;
 
+	//set age of new cells to 0
+	parentCell.Age = 0.0;
+	daughterCell.Age = 0.0;
+
 	// add mother and daughter to grid
 	Grid.Add(parentID, Grid.GetAddress(average(parentCell.Position)));
 	Grid.Add(daughterID, Grid.GetAddress(average(daughterCell.Position)));
