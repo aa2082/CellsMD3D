@@ -62,7 +62,7 @@ void grow(double dt, Cell& cell, EnvArray3D& Env, AgaArray2D** Wal, UniformGrid&
 	cell.Length += dL; // increase the length of the cell
 	cell.Age += dt;
 	cell.Volume = (PI*cell.Radius*cell.Radius)*(cell.Length + (4.0/3.0)*cell.Radius);
-	
+
 	cell.Position.p = diff(cell.Position.p,dv);
 	cell.Position.q = sum(cell.Position.q,dv);
 	cell.GrowthRate = Growth_rate;
@@ -76,7 +76,9 @@ void grow(double dt, Cell& cell, EnvArray3D& Env, AgaArray2D** Wal, UniformGrid&
 // takes in a mother cell and returns mother and daughter after division
 void divide(Cell& mother, Cell& daughter, double t){
 
-	double dl = ((float)rand()/RAND_MAX-0.5)*varL;	// random part of the length after division
+		double dl = ((float)rand()/RAND_MAX-0.5)*varL;	// random part of the length after division
+		double random_dL_divide = ((float)rand()/RAND_MAX-0.5)*dL_divide;
+		double random_dT_divide = ((float)rand()/RAND_MAX-0.5)*dT_divide;
     double dangle = ((float)rand()/RAND_MAX-0.5)*varAngle;	// random part of the orientation angle after division
     DoubleCoord pq = diff(mother.Position.p,mother.Position.q);
     // random orientation for cell1

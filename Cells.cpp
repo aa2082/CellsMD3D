@@ -52,15 +52,15 @@ void GrowCell(Cell& cell, int cellID, double dt, int* dividingCells, int& numDiv
 	switch (GrowthProfile) {
 			case 0:
 				// ADDER
-				if(cell.Length-cell.InitialLength>Adder_L_divide)	divide = true;
+				if(cell.Length-cell.InitialLength>Adder_L_divide+dL_divide)	divide = true;
 				break;
 			case 1:
 				// SIZER
-				if(cell.Length>L_divide)	divide = true;
+				if(cell.Length>L_divide+dL_divide)	divide = true;
 				break;
 			case 2:
 				// TIMER
-				if(cell.Age>T_divide)	divide = true;
+				if(cell.Age>T_divide+dT_divide)	divide = true;
 				break;
 	}
 	if (divide)
