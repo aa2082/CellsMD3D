@@ -49,6 +49,8 @@ void GrowCell(Cell& cell, int cellID, double dt, int* dividingCells, int& numDiv
 	// check if cell will divide
 	// add SWITCH here!
 	bool divide = false;
+	double random_dL_divide = ((float)rand()/RAND_MAX-0.5)*dL_divide;
+	double random_dT_divide = ((float)rand()/RAND_MAX-0.5)*dT_divide;
 	switch (GrowthProfile) {
 			case 0:
 				// ADDER

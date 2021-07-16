@@ -77,8 +77,6 @@ void grow(double dt, Cell& cell, EnvArray3D& Env, AgaArray2D** Wal, UniformGrid&
 void divide(Cell& mother, Cell& daughter, double t){
 
 		double dl = ((float)rand()/RAND_MAX-0.5)*varL;	// random part of the length after division
-		double random_dL_divide = ((float)rand()/RAND_MAX-0.5)*dL_divide;
-		double random_dT_divide = ((float)rand()/RAND_MAX-0.5)*dT_divide;
     double dangle = ((float)rand()/RAND_MAX-0.5)*varAngle;	// random part of the orientation angle after division
     DoubleCoord pq = diff(mother.Position.p,mother.Position.q);
     // random orientation for cell1
