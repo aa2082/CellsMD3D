@@ -22,7 +22,7 @@ void grow(double dt, Cell& cell, EnvArray3D& Env, AgaArray2D** Wal, UniformGrid&
 
 	// Get position in uniform grid to access correct index for height
 	IntCoord XYAddress = Grid.GetXY(Grid.GetAddress(cm));
-    /*
+  
 	// Look up the growth rate in the environment array
 	Growth_rate = Env.Get(XYAddress).GrowthRate;
 
@@ -49,7 +49,7 @@ void grow(double dt, Cell& cell, EnvArray3D& Env, AgaArray2D** Wal, UniformGrid&
         Cgr = Cgr/(Cgr+KC);
         Growth_rate = maxGrowthRate*max(0.0,Cgr-Maintenance_rate/C_rate);
     }
-	*/
+
 	//Growth_rate = Growth_rate*1.5850; // log(3)/log(2)
 	Growth_rate = 2;
 	DoubleCoord v = diff(cell.Position.q, cell.Position.p);				// vector along segment
