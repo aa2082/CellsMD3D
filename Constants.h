@@ -6,10 +6,10 @@
 // physical variables
 extern double cellRadius;
 extern double L_divide;
-extern double T_divide;
-extern double Adder_L_divide;
-extern double dL_divide;
-extern double dT_divide;
+
+extern double divide_mean;
+extern double divide_std_dev;
+extern double septum_std_dev;
 extern double k_cc;
 extern double k_wc;
 extern double varL;

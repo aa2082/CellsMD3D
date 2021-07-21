@@ -47,22 +47,19 @@ void GrowCell(Cell& cell, int cellID, double dt, int* dividingCells, int& numDiv
 	grow(dt, cell, Env, Wal, Grid);
     int index;
 	// check if cell will divide
-	// add SWITCH here!
 	bool divide = false;
-	double random_dL_divide = ((float)rand()/RAND_MAX-0.5)*dL_divide;
-	double random_dT_divide = ((float)rand()/RAND_MAX-0.5)*dT_divide;
 	switch (GrowthProfile) {
 			case 0:
 				// ADDER
-				if(cell.Length-cell.InitialLength>Adder_L_divide+random_dL_divide)	divide = true;
+				if(cell.Length-cell.InitialLength>cell.division_threshold)	divide = true;
 				break;
 			case 1:
 				// SIZER
-				if(cell.Length>L_divide+random_dL_divide)	divide = true;
+				if(cell.Length>cell.division_threshold)	divide = true;
 				break;
 			case 2:
 				// TIMER
-				if(cell.Age>T_divide+random_dT_divide)	divide = true;
+				if(cell.Age>cell.division_threshold)	divide = true;
 				break;
 	}
 	if (divide)
@@ -93,11 +90,11 @@ void DivideCell(int parentID, int daughterID, Cell* cells, UniformGrid& Grid, co
 	Grid.Remove(parentID, oldAddress);
 	std::ofstream lbld;
 	lbld.open("lbld.txt", std::fstream::out | std::fstream::app);
-	lbld << t << ",\t" << parentID << ",\tld,\t" << parentCell.Length << "\n";
+	lbld << t << ",\t" << parentID << ",\t1,\t" << parentCell.Length << "\n";
 	// divide and create a new cell with ID N_cells
 	divide(parentCell, daughterCell, t);
-	lbld << t << ",\t" << parentID << ",\tlb,\t" << parentCell.Length << "\n";
-	lbld << t << ",\t" << daughterID << ",\tlb,\t" << daughterCell.Length << "\n";
+	lbld << t << ",\t" << parentID << ",\t0,\t" << parentCell.Length << "\n";
+	lbld << t << ",\t" << daughterID << ",\t0,\t" << daughterCell.Length << "\n";
 	lbld.close();
 
 	parentCell.InitialLength = parentCell.Length;

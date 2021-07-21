@@ -11,6 +11,7 @@
 #include "tools.h"
 #include "UniformGrid.h"
 #include "Nutrients.h"
+#include "rng.h"
 
 
 // grow the cell
@@ -75,8 +76,9 @@ void grow(double dt, Cell& cell, EnvArray3D& Env, AgaArray2D** Wal, UniformGrid&
 
 // takes in a mother cell and returns mother and daughter after division
 void divide(Cell& mother, Cell& daughter, double t){
-
-		double dl = ((float)rand()/RAND_MAX-0.5)*varL;	// random part of the length after division
+		std::normal_distribution<> septum_distribution{0.0,septum_std_dev};
+		double dl = septum_distribution(rng);
+		//double dl = ((float)rand()/RAND_MAX-0.5)*varL;	// random part of the length after division
     double dangle = ((float)rand()/RAND_MAX-0.5)*varAngle;	// random part of the orientation angle after division
     DoubleCoord pq = diff(mother.Position.p,mother.Position.q);
     // random orientation for cell1

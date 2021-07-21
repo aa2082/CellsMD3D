@@ -14,20 +14,22 @@
 
 using namespace std;
 
-int main( int argc, char* argv[] ) 
+std::mt19937 rng;
+
+int main( int argc, char* argv[] )
 {
 	srand((unsigned)time(NULL));
 	bool append;
-    
+
     strcpy(DirName, argv[3]);
     printf("Output saved to directory: %s\n", DirName);
-    
+
     int threadCount = atoi(argv[2]);
-    
+
 	if(threadCount > omp_get_max_threads()){threadCount = omp_get_max_threads();}
 	if(threadCount <= 0)                   {threadCount = omp_get_max_threads();}
     omp_set_num_threads(threadCount);
-	
+
     // read in parameters, or else use all defaults
 
 	Inputs IniConditions;
@@ -41,7 +43,7 @@ int main( int argc, char* argv[] )
 	// Predefine arrays of cells for storing cell information
 	Cell* old_cells = new Cell[maxCells];
 	Cell* new_cells = new Cell[maxCells];
-	
+
 	printf("Created cell arrays \n");
 
 	// Define a grid to store the cell positions
@@ -90,7 +92,7 @@ int main( int argc, char* argv[] )
         FieldWall[i]=new AgaArray2D(BoxX, BoxY);
         oldFieldWall[i]=new AgaArray2D(BoxX, BoxY);
     }
-    
+
 	printf("Created fields \n");
 
 	CoordArray2D Normal(BoxX*refinementGridHeight, BoxY*refinementGridHeight);
@@ -105,16 +107,16 @@ int main( int argc, char* argv[] )
 
 	// Main simulation function
 	RunSimulation(N_cells, old_cells, new_cells, NeighbourList, maxNeighbours, Grid, Files, append, Height, Density, Density1, Density2, WallDensity, WallDensity1, WallDensity2, Environment, oldEnvironment, FieldAgar, oldFieldAgar, FieldWall, oldFieldWall, Normal);
-	
+
 	// save end time
 	t_end = time(NULL);
 
 	// cleanup
     CloseOutputFileLineage(Files);
-    
+
 	delete[] old_cells;
 	delete[] new_cells;
-    
+
     for (int i=0; i<maxLevels; i++)
     {
         delete FieldAgar[i];
@@ -122,7 +124,7 @@ int main( int argc, char* argv[] )
         delete FieldWall[i];
         delete oldFieldWall[i];
     }
-	
+
 	printf("Total time for simulation %ld\n",t_end-t_start);
 	return 0;
 }

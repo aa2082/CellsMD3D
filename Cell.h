@@ -9,7 +9,8 @@
 #define CELL_H_
 
 #include "tools.h"
-
+#include "rng.h"
+#include "Constants.h"
 /*
 #define ADDER = 0
 #define SIZER = 1
@@ -36,6 +37,8 @@ struct Cell
 	double InitialLength;
 	double Volume; 		//volume of cell
 	double Age = 0.0;				//time since cell birth
+	std::normal_distribution<> divide_distribution{divide_mean,divide_std_dev};
+	double division_threshold = divide_distribution(rng);
 };
 
 #endif /* CELL_H_ */

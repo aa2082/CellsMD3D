@@ -1,10 +1,9 @@
 double cellRadius = 0.34;		// radius of each cell cap (constant for now, microns)
 double L_divide = 5.75;		// 3 length when cells divide (microns)
 
-double T_divide = 0.0;
-double Adder_L_divide = 0.0;
-double dL_divide = 0.0;
-double dT_divide = 0.0;
+double divide_mean = 0.0;
+double divide_std_dev = 0.0;
+double septum_std_dev = 0.0;
 
 double k_cc = 100000.0;			// elastic constant for cell-cell interactions (atm?)
 double k_wc = 100000.0;			// elastic constant between cells and wall
